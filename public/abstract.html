@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Abstract Submission – VI Workshop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen text-gray-900 bg-fixed bg-cover bg-center"
+        style="background-image: url('/img/background.jpg');">
+
+    <!-- Banner topo (mesma faixa do site) -->
+    <div class="max-w-5xl mx-auto px-4">
+    <div class="w-full h-40 md:h-80 overflow-hidden rounded-2xl shadow-md">
+        <img src="/img/hero-bg.png" alt="Workshop Banner" class="w-full h-full object-cover"/>
+    </div>
+    </div>
+
+    <!-- <div className="max-w-6xl mx-auto px-4">
+        <div className="w-full h-48 md:h-80 overflow-hidden rounded-2xl shadow-md">
+        <img
+            src="/img/hero-bg.png"
+            alt="Faixa Workshop"
+            className="w-full h-full object-cover"
+        />
+        </div>
+    </div> -->
+
+    <main class="mx-auto max-w-5xl px-4 py-10">
+      <h1 class="text-2xl md:text-3xl font-bold mb-2">Abstract Submission</h1>
+      <p class="text-gray-600 mb-6">
+        Please fill out the form below. The abstract must be in English and limited to <strong>2000 characters</strong>.
+      </p>
+
+      <!-- Netlify Form -->
+      <form
+        name="abstract"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        action="/abstract-thanks.html"
+        class="space-y-5 bg-white/90 backdrop-blur rounded-2xl border p-6"
+      >
+        <!-- Netlify: obrigatório -->
+        <input type="hidden" name="form-name" value="abstract" />
+
+        <!-- honeypot anti-bot -->
+        <p class="hidden">
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
+
+        <!-- Contatos do autor -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="flex flex-col gap-2">
+            <label class="text-sm font-medium">Full name</label>
+            <input name="name" class="rounded-2xl border px-3 py-2" placeholder="Your name" required />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="text-sm font-medium">E-mail</label>
+            <input name="email" type="email" class="rounded-2xl border px-3 py-2" placeholder="your@email.com" required />
+          </div>
+        </div>
+
+        <!-- Departamento / Programa + Posição/Status -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="flex flex-col gap-2">
+            <label class="text-sm font-medium">Department / Graduate Program</label>
+            <input name="department_program" class="rounded-2xl border px-3 py-2" placeholder="e.g., Physics Engineering / PPENGFIS" />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label class="text-sm font-medium">Current Position / Academic Status</label>
+            <select name="academic_status" class="rounded-2xl border px-3 py-2">
+              <option value="">Select your status</option>
+              <option>Undergraduate Student</option>
+              <option>Graduate Student</option>
+              <option>Master’s Student</option>
+              <option>PhD Candidate</option>
+              <option>Professor</option>
+              <option>Researcher</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Autores e Afiliações -->
+        <div class="flex flex-col gap-2">
+          <label class="text-sm font-medium">Authors and Co-authors</label>
+          <input
+            name="authors"
+            class="rounded-2xl border px-3 py-2"
+            placeholder='List the authors separated by ",": Author 1, Author 2, Author 3 ...'
+          />
+          <p class="text-xs text-gray-500">List the authors and co-authors separated by a comma in the order they appear in your work.</p>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label class="text-sm font-medium">Affiliations</label>
+          <input
+            name="affiliations"
+            class="rounded-2xl border px-3 py-2"
+            placeholder='Ex.: Institution (Author 1), Institution (Author 2), Institution (Author 3) ...'
+          />
+          <p class="text-xs text-gray-500">Use the same order as the authors. Example: Institution (Author 1), Institution (Author 2), ...</p>
+        </div>
+
+        <!-- Área temática -->
+        <div class="flex flex-col gap-2">
+          <label class="text-sm font-medium">Thematic Area / Research Field</label>
+          <select name="research_field" class="rounded-2xl border px-3 py-2" required>
+            <option value="">Select a field</option>
+            <option>Optoelectronics</option>
+            <option>Materials Science</option>
+          </select>
+        </div>
+
+        <!-- Título + Abstract -->
+        <div class="flex flex-col gap-2">
+          <label class="text-sm font-medium">Title</label>
+          <input name="title" class="rounded-2xl border px-3 py-2" placeholder="Title of your abstract" required />
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <div class="flex items-center justify-between">
+            <label class="text-sm font-medium">Abstract (max 2000 characters)</label>
+            <span id="charCount" class="text-xs text-gray-500">0 / 2000</span>
+          </div>
+          <textarea
+            id="abstractField"
+            name="abstract"
+            maxlength="2000"
+            class="min-h-48 rounded-2xl border px-3 py-2 w-full"
+            placeholder="Paste your abstract here..."
+            required
+          ></textarea>
+        </div>
+
+        <!-- Consentimento -->
+        <label class="flex items-start gap-2 text-sm text-gray-600">
+          <input type="checkbox" name="consent" class="mt-1" required />
+          I agree that my data may be used for the organization of the VI Workshop – PPENGFIS and to contact me about this submission.
+        </label>
+
+        <!-- Enviar -->
+        <button type="submit" class="rounded-2xl px-5 py-3 bg-gray-900 text-white font-medium hover:opacity-90">
+          Submit your Abstract
+        </button>
+      </form>
+    </main>
+
+    <!-- Script: contador de caracteres -->
+    <script>
+      const field = document.getElementById('abstractField');
+      const counter = document.getElementById('charCount');
+      const max = 2000;
+      function updateCount() {
+        const len = (field.value || '').length;
+        counter.textContent = len + ' / ' + max;
+      }
+      field.addEventListener('input', updateCount);
+      updateCount();
+    </script>
+  </body>
+</html>

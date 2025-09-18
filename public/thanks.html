@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Registration received • VI Workshop – PPENGFIS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="color-scheme" content="light only" />
+</head>
+<body class="min-h-screen bg-gradient-to-b from-gray-50 to-white text-gray-900">
+  <!-- Header simples (opcional) -->
+  <header class="border-b bg-white/80 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="h-8 w-8 rounded-2xl bg-gray-900"></div>
+        <span class="font-semibold">VI Workshop – PPENGFIS</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="/" class="hover:underline">Home</a>
+        <a href="/#program" class="hover:underline">Program</a>
+        <a href="/#speakers" class="hover:underline">Speakers</a>
+        <a href="/#registration" class="hover:underline">Registration</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="mx-auto max-w-3xl px-4 py-16">
+    <div class="rounded-3xl border bg-white shadow-sm overflow-hidden">
+      <div class="p-8 md:p-12 text-center">
+        <!-- Check icon -->
+        <div class="mx-auto mb-6 grid h-16 w-16 place-items-center rounded-full bg-green-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+            <path d="m22 4-10 10-3-3" />
+          </svg>
+        </div>
+
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-3">
+          Registration received
+        </h1>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Thank you for registering for the <strong>VI International Workshop of the Graduate Program on Physics Engineering (PPENGFIS/UFRPE)</strong>.
+          You will receive a confirmation by e-mail shortly. Keep an eye on our program and speakers.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="/" class="px-6 py-3 rounded-2xl bg-gray-900 text-white hover:opacity-90">
+            ← Back to home
+          </a>
+          <a href="/#program" class="px-6 py-3 rounded-2xl border hover:bg-gray-50">
+            View program
+          </a>
+        </div>
+      </div>
+
+      <!-- Info strip -->
+      <div class="bg-gray-50 border-t px-6 py-5 text-sm text-gray-600 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p>Need assistance? Contact: <a href="mailto:workshop@ppengfis.ufrpe.br" class="underline">workshop@ppengfis.ufrpe.br</a></p>
+        <p>UFRPE • Recife, PE, Brazil</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer mínimo -->
+  <footer class="px-4 py-8 text-center text-sm text-gray-500">
+    © <span id="year"></span> PPENGFIS • UFRPE • VI International Workshop
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
