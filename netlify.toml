@@ -3,5 +3,3 @@
   publish = "dist"
   functions = "netlify/functions"
 
-[[plugins]]
-  package = "@netlify/plugin-functions-core"
