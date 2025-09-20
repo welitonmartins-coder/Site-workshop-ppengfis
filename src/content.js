@@ -16,87 +16,93 @@ export const DATES = [
 
 export const PROGRAM = {
   "Day 1": [
-    {
-      "time": "09:00 - 09:40:",
-      "item": "OPENING – PPENGFIS COORDINATION"
+    { "time": "09:00 - 09:40", "item": "OPENING – PPENGFIS COORDINATION", "type": "Opening" },
+    { "time": "09:40 - 10:20", 
+      "item": "PROF. LUIS ARTURO – IIT - UPE", 
+      "title": "To be announced", 
+      "abstractUrl": "/talk-abstracts.html#luis-arturo-gomez-malagon" 
     },
-    {
-      "time": "09:40 - 10:20:",
-      "item": "PROF. LUIS ARTURO – IIT - UPE"
+    { "time": "10:20 - 10:40", 
+      "item": "COFFEE BREAK", 
+      "type": "Break" 
     },
-    {
-      "time": "10:20 - 10:40:",
-      "item": "COFFEE BREAK"
+    { "time": "10:40 - 11:20", 
+      "item": "DR. IGOR CARVALHO – HORIBA", 
+      "title": "MULTIMODAL CO-LOCALIZED SPECTROSCOPY FOR PHYSCO-CHEMICAL CHARACTERIZATION OF SAMPLES", 
+      "abstractUrl": "/talk-abstracts.html#igor-alessandro-silva-carvalho" 
     },
-    {
-      "time": "10:40 - 11:20:",
-      "item": "DR. IGOR CARVALHO – HORIBA"
+    { "time": "11:20 - 12:00", 
+      "item": "PROF. TATIANA PORTO – DMFA - UFRPE", 
+      "title": "To be announced", 
+      "abstractUrl": "/talk-abstracts.html#tatiana-souza-porto" 
     },
-    {
-      "time": "11:20 - 12:00:",
-      "item": "PROF. TATIANA PORTO – DMFA - UFRPE"
+    { "time": "12:00 - 14:00", 
+      "item": "LUNCH", "type": 
+      "Break" 
     },
-    {
-      "time": "12:00 - 14:00:",
-      "item": "LUNCH"
+    { "time": "14:00 - 14:40", 
+      "item": "PROF. WELITON MARTINS – UACSA - PPENGFIS - UFRPE", 
+      "title": "To be announced", 
+      "abstractUrl": "/talk-abstracts.html#weliton-soares-martins" 
     },
-    {
-      "time": "14:00 - 14:40:",
-      "item": "PROF. WELITON MARTINS – UACSA - PPENGFIS - UFRPE"
+    { "time": "14:40 - 15:20", 
+      "item": "PROF. SEVERINO JUNIOR – DQF - UFPE", 
+      "title": "To be announced", 
+      "abstractUrl": "/talk-abstracts.html#severino-alves-junior" 
     },
-    {
-      "time": "14:40 - 15:20:",
-      "item": "PROF. SEVERINO JUNIOR – DQF - UFPE"
-    },
-    {
-      "time": "15:20 - 15:50:",
-      "item": "COFFEE BREAK"
-    },
-    {
-      "time": "15:50 - 16:30:",
-      "item": "POSTER SESSION"
-    }
+    { "time": "15:20 - 15:50", 
+      "item": "COFFEE BREAK", 
+      "type": "Break" },
+    { "time": "15:50 - 16:30", 
+      "item": "POSTER SESSION", 
+      "type": "Poster" }
   ],
   "Day 2": [
-    {
-      "time": "09:00 - 09:40:",
-      "item": "PROF. YANA BATISTA BRANDÃO – UACSA - PPENGFIS - UFRPE"
+    { "time": "09:00 - 09:40", 
+      "item": "PROF. YANA BATISTA BRANDÃO – UACSA - PPENGFIS - UFRPE", 
+      "title": "To be announced", 
+      "abstractUrl": "/talk-abstracts.html#yana-batista-brandao" 
     },
-    {
-      "time": "09:40 - 10:20:",
-      "item": "ALLINY STEFANY DA SILVA ALVES – TERPHANE LTDA"
+    { "time": "09:40 - 10:20", 
+      "item": "MSc. ALLINY STEFANY DA SILVA ALVES – TERPHANE LTDA", 
+      "title": "To be announced", 
+      "abstractUrl": "/talk-abstracts.html#alliny-stefany-da-silva-alves" 
     },
-    {
-      "time": "10:20 - 10:40:",
-      "item": "COFFEE BREAK"
+    { "time": "10:20 - 10:40", 
+      "item": "COFFEE BREAK", 
+      "type": "Break" },
+    { "time": "10:40 - 11:20", 
+      "item": "PROF. CARLOS JACINTO DA SILVA – IF - UFAL", 
+      "title": "To be announced", 
+      "abstractUrl": "/talk-abstracts.html#carlos-jacinto-da-silva" 
     },
-    {
-      "time": "10:40 - 11:20:",
-      "item": "PROF. CARLOS JACINTO DA SILVA – IF - UFAL"
+    { "time": "11:20 - 12:00", 
+      "item": "DR. MILRIAN DA SILVA MENDES – SETUP INSTRUMENTS4LABS", 
+      "title": "To be announced", 
+      "abstractUrl": "/talk-abstracts.html#milrian-da-silva-mendes" 
     },
-    {
-      "time": "11:20 - 12:00:",
-      "item": "Dr. MILRIAN DA SILVA MENDES – SETUP INSTRUMENTS4LABS"
+    { "time": "12:00 - 14:00", 
+      "item": "LUNCH", 
+      "type": "Break" 
     },
-    {
-      "time": "12:00 - 14:00:",
-      "item": "LUNCH"
+    { "time": "14:00 - 14:40", 
+      "item": "PROF. ITALO BOVE – UNIVERSIDAD DE LA REPÚBLICA", 
+      "title": "To be announced", 
+      "abstractUrl": "/talk-abstracts.html#italo-bove" 
     },
-    {
-      "time": "14:00 - 14:40:",
-      "item": "PROF. ITALO BOVE – UNIV. DE MONTEVIDEO"
+    { "time": "14:40 - 15:20", 
+      "item": "PROF. EDSON CAVALCANTI DA SILVA FILHO – DQ - UFPI", 
+      "title": "Hidrogéis à base de polissacarídeos naturais: potencialidades e aplicações", 
+      "abstractUrl": "/talk-abstracts.html#edson-cavalcanti-da-silva-filho" 
     },
-    {
-      "time": "14:40 - 15:20:",
-      "item": "PROF. EDSON CAVALCANTI DA SILVA FILHO – DQ - UFPI"
+    { "time": "15:20 - 15:50", 
+      "item": "COFFEE BREAK", 
+      "type": "Break" 
     },
-    {
-      "time": "15:20 - 15:50:",
-      "item": "COFFEE BREAK"
-    },
-    {
-      "time": "15:50 - 16:30:",
-      "item": "PROF. ANDERSON STEVENS LEONIDAS GOMES – DF-UFPE"
+    { "time": "15:50 - 16:30", 
+      "item": "PROF. ANDERSON STEVENS LEONIDAS GOMES – DF-UFPE", 
+      "title": "To be announced", 
+      "abstractUrl": "/talk-abstracts.html#anderson-stevens-leonidas-gomes" 
     }
   ]
 };
@@ -164,7 +170,7 @@ export const SPEAKERS = [
   },
   {
     "name": "Italo Bove",
-    "affiliation": "UNIVERSIDAD DE MONTEVIDEO",
+    "affiliation": "UNIVERSIDAD DE LA REPÚBLICA",
     "talk": "",
     "photo": "/img/speaker-italo.jpg"
   },
@@ -183,7 +189,7 @@ export const SPEAKERS = [
 ];
 
 export const VENUE = {
-  "address": "UFRPE/UACSA - PPENGFIS -  Cabo de Santo Agostinho - PE",
+  "address": "UFRPE - UACSA - PPENGFIS: R. Cento e Sessenta e Três, 300 - Cohab, Cabo de Santo Agostinho - PE, Brazil.",
   "map_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.0104378031715!2d-35.023759999999996!3d-8.301758999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aaefc2767bf9a3%3A0xda4914c2766ec88d!2sUFRPE%20-%20UACSA!5e0!3m2!1sen!2sbr!4v1757762202508!5m2!1sen!2sbr"
 };
 
@@ -198,7 +204,7 @@ export const SPONSORS = [
     logo: "/img/logo-uacsa.jpg"
   },
   {
-    logo: "/img/logo-ufrpe.jpg"
+    logo: "/img/ufrpe-logo.png" 
   },
   // {
   //   logo: "/img/logo-cnpq.jpg"
@@ -220,6 +226,12 @@ export const CONTACTS = {
 
 // --- Organizing Committee ---
 export const COMMITTEE = [
+   {
+    name: "Prof. Rafael Alves de Oliveira",
+    role: "Workshop Coordinator",
+    // affiliation: "PPENGFIS / UFRPE",
+    photo: "/img/committee/rafael.png",
+  },
   {
     name: "Prof. Albert Stevens Reyna Ocas ",
     // role: "General Chair",
@@ -227,13 +239,7 @@ export const COMMITTEE = [
     photo: "/img/committee/albert.png", // coloque o arquivo em public/img/committee/
   },
   {
-    name: "Prof. Rafael Alves de Oliveira",
-    // role: "Program Chair",
-    // affiliation: "PPENGFIS / UFRPE",
-    photo: "/img/committee/rafael.png",
-  },
-  {
-    name: "Prof. Welito Soares Martins",
+    name: "Prof. Weliton Soares Martins",
     // role: "Local Arrangements",
     // affiliation: "PPENGFIS / UFRPE",
     photo: "/img/committee/weliton.png",

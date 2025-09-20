@@ -17,6 +17,7 @@ export default function ProgramSection({ data }) {
   return (
     <section id="program" className="mx-auto max-w-6xl px-4 py-16">
       <h2 className="text-2xl md:text-3xl font-bold mb-6">Program</h2>
+    
 
       <div className="rounded-2xl border border-gray-300 bg-gray-50 overflow-hidden">
         {/* Tabs */}
@@ -73,6 +74,26 @@ export default function ProgramSection({ data }) {
                     {s.item}
                   </div>
 
+                  {/* Título da palestra (se houver) + link para o resumo */}
+                  {(s.title || s.abstractUrl) && (
+                    <div className="mt-1 text-sm text-gray-700">
+                      {s.title && <span className="italic">{s.title}</span>}
+                      {s.abstractUrl && (
+                        <>
+                          {" "}
+                          <a
+                            href={s.abstractUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline text-blue-600 hover:text-blue-800"
+                          >
+                            [Abstract]
+                          </a>
+                        </>
+                      )}
+                    </div>
+                  )}
+
                   <div className="mt-1 flex flex-wrap gap-3 text-sm text-gray-600">
                     {s.speaker && (
                       <span className="inline-flex items-center gap-1">
@@ -99,6 +120,9 @@ export default function ProgramSection({ data }) {
                     </p>
                   )}
                 </div>
+
+
+
               </li>
             ))}
           </ul>

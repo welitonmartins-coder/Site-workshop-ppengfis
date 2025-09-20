@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, Rocket, Wrench, BookOpen, Send } from 'lucide-react'
-import { DATES, PROGRAM, SPEAKERS, VENUE, SPONSORS, CONTACTS, COMMITTEE  } from './content';
+import { Mail, Phone, Wrench, BookOpen, Send } from 'lucide-react'
+import { DATES, PROGRAM, SPEAKERS, VENUE, SPONSORS, CONTACTS, COMMITTEE} from './content';
 import ProgramSection from "./components/ProgramSection";
-
 
 
 export default function App() {
@@ -14,7 +13,7 @@ export default function App() {
         <nav className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img
-              src="/img/logo-ppengfis.jpg"
+              src="/img/logo-ppengfis.png"
               alt="PPENGFIS Logo"
               className="h-20 w-20 object-contain"
             />
@@ -31,18 +30,39 @@ export default function App() {
             <a href="#registration" className="hover:underline">Registration</a>
             <a href="#abstract-submission" className="hover:underline">Abstract Submission</a>
           </div>
+          
+          <div className="flex items-center gap-2">
+            <img
+              src="/img/ufrpe-logo.png"
+              alt="UFRPE Logo"
+              className="h-20 w-20 object-contain"
+            />
+          </div>
+          
           <div className="flex items-center gap-2">
             <a href="#registration" className="px-4 py-2 rounded-2xl bg-gray-900 text-white hover:opacity-90">Register</a>
+          
           </div>
+
         </nav>
       </header>
-
+{/* 
       <div className="max-w-6xl mx-auto px-4">
         <div className="w-full h-48 md:h-[300px] overflow-hidden rounded-2xl shadow-md">
           <img
             src="/img/hero-bg.png"
             alt="Faixa Workshop"
             className="w-full h-full object-cover object-top"
+          />
+        </div>
+      </div> */}
+
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="w-full h-35 sm:h-64 md:h-75 overflow-hidden rounded-2xl shadow-md">
+          <img
+            src="/img/hero-bg.png"
+            alt="Faixa Workshop"
+            className="w-full h-full object-cover object-center md:object-top"
           />
         </div>
       </div>
@@ -195,6 +215,13 @@ export default function App() {
       <section id="venue" className="mx-auto max-w-6xl px-4 py-16">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Venue</h2>
           <p className="text-gray-700 mb-6">{VENUE.address || "UFRPE – Recife, Pernambuco, Brazil."}</p>
+          
+          <p className="text-gray-700 mb-6">
+            There will be a <strong>free university shuttle bus</strong>, departing from
+            <strong> UFRPE Main Campus</strong> to <strong>UACSA</strong> and returning at the end of the day. 
+            The website will be updated with more details for participants who wish to use the <strong> workshop transportation service</strong>.
+          </p>
+
               {VENUE.map_url ? (
                 <div className="aspect-video w-full rounded-2xl border overflow-hidden">
                   <iframe
@@ -207,6 +234,43 @@ export default function App() {
               ) : (
                 <div className="aspect-video w-full rounded-2xl border grid place-items-center">Map placeholder</div>
               )}
+
+              {/* Bus Lines */}
+                <h3 className="mt-10 text-xl font-semibold mb-2">If you are not using the event shuttle bus, below are public transportation
+                   options to reach the venue.</h3>
+
+                <div className="space-y-4 text-gray-700">
+                  <div>
+                    <p className="font-semibold">From Cabo Terminal (TI Cabo):</p>
+                    <ul className="list-disc list-inside">
+                      <li>Line 129 – Paiva / TI Cabo</li>
+                      <li>Line 157 – Gaibu / TI Cabo</li>
+                      <li>Line 178 – Porto de Suape / TI Cabo</li>
+                      <li>Line 196 – Nossa Senhora do Ó / TI Cabo (Porto de Galinhas)</li>
+                      <li>Line 198 – Ipojuca / TI Cabo</li>
+                      <li>Line 199 – Camela / TI Cabo</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <p className="font-semibold">From Santa Rita Terminal, Recife Downtown:</p>
+                    <ul className="list-disc list-inside">
+                      <li>Line 185 – TI Cabo (Cais de Santa Rita)</li>
+                      <li>Line 191 – Recife / Porto de Galinhas (N. Sra. do Ó)</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <p className="font-semibold">From Cajueiro Seco Terminal, Jaboatão dos Guararapes:</p>
+                    <ul className="list-disc list-inside">
+                      <li>Line 139 – TI Cabo / TI Cajueiro Seco</li>
+                      <li>Line 181 – Cabo (Cohab) / TI Cajueiro Seco (Faculdades)</li>
+                    </ul>
+                  </div>
+                </div>
+
+
+
       </section>
 
       {/* Sponsors */}
@@ -241,6 +305,9 @@ export default function App() {
           </div>
         </div>
       </section>
+
+
+
 
       {/* Registration (Netlify Forms) */}
       <section id="registration" className="mx-auto max-w-6xl px-4 py-5">
