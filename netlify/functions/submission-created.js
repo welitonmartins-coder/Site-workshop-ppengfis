@@ -19,7 +19,7 @@ export async function handler(event) {
     }
 
     const RESEND_API_KEY = process.env.RESEND_API_KEY;
-    const FROM = process.env.MAIL_FROM || "VI Workshop <onboarding@resend.dev>";
+    const FROM = process.env.MAIL_FROM || "VI WorkshopPPENGFIS <workshop@welitonprojetos.com>";
     const REPLY_TO = process.env.REPLY_TO || "workshop.ppengfis@ufrpe.br";
 
     // Helpers de formatação (escapes simples e fallback)

@@ -41,7 +41,7 @@ export const PROGRAM = {
       "Break" 
     },
     { "time": "14:00 - 14:40", 
-      "item": "PROF. WELITON MARTINS – UACSA - PPENGFIS - UFRPE", 
+      "item": "PROF. WELITON SOARES MARTINS – UACSA - PPENGFIS - UFRPE", 
       "title": "To be announced", 
       "abstractUrl": "/talk-abstracts.html#weliton-soares-martins" 
     },

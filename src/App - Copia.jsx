@@ -4,65 +4,8 @@ import { Mail, Phone, Wrench, BookOpen, Send } from 'lucide-react'
 import { DATES, PROGRAM, SPEAKERS, VENUE, SPONSORS, CONTACTS, COMMITTEE} from './content';
 import ProgramSection from "./components/ProgramSection";
 
-// ⚠️ Ajuste as datas para seus prazos reais
-const REG_DEADLINE = new Date('2025-10-30T23:59:59-03:00'); // Registration deadline
-const ABS_DEADLINE = new Date('2025-10-30T23:59:59-03:00');  // Abstract deadline
-
-const now = new Date();
-const isRegClosed = now > REG_DEADLINE;
-const isAbsClosed = now > ABS_DEADLINE;
-
 
 export default function App() {
-
-          const [regError, setRegError] = React.useState("");
-
-          async function handleRegistrationSubmit(e) {
-            const form = e.currentTarget;
-            const email = (form.email?.value || "").trim().toLowerCase();
-
-            // 1) Bloqueio leve no cliente (mesmo dispositivo)
-            if (email && localStorage.getItem(`reg_${email}`)) {
-              e.preventDefault();
-              setRegError("Este e-mail já realizou uma inscrição neste dispositivo.");
-              return;
-            }
-
-            // 2) (Opcional) Checagem anti-robô simples por tempo entre cliques
-            const last = Number(localStorage.getItem('reg_last_ts') || 0);
-            const nowTs = Date.now();
-            if (nowTs - last < 5000) { // < 5s desde a última tentativa
-              e.preventDefault();
-              setRegError("Por favor, aguarde alguns segundos antes de enviar novamente.");
-              return;
-            }
-
-            // 3) Se quiser integrar a função serverless /check-duplicate depois,
-            //    você pode manter este try/catch (ele falha silenciosamente se não existir)
-            try {
-              const r = await fetch('/.netlify/functions/check-duplicate', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({ formName: 'registration', email })
-              });
-              if (r.ok) {
-                const { exists } = await r.json();
-                if (exists) {
-                  e.preventDefault();
-                  setRegError("Já existe uma inscrição para este e-mail.");
-                  return;
-                }
-              }
-            } catch {
-              // sem função no ar → segue o fluxo normal
-            }
-
-            // Marca local para evitar reenvio e aplica pequena janela de tempo
-            if (email) localStorage.setItem(`reg_${email}`, '1');
-            localStorage.setItem('reg_last_ts', String(nowTs));
-          }
-
-
   return (
     <div className="min-h-screen bg-transparent text-gray-900">
       {/* Navbar */}
@@ -364,18 +307,21 @@ export default function App() {
       </section>
 
 
-      {/* Registration (Netlify Forms) */} 
+
+
+      {/* Registration (Netlify Forms) */}
       <section id="registration" className="mx-auto max-w-6xl px-4 py-5">
         <div className="grid md:grid-cols-2 gap-10">
           
-          {/* Lado esquerdo: informações (mantido) */}
-          <div>
+          {/* Lado esquerdo: informações */}
+        <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Registration</h2>
 
             <p className="text-gray-700 mb-4">
               Participation in the <strong>VI International Workshop of the Graduate Program on Physics Engineering</strong>
               is <strong>free of charge</strong>, but registration is required.
             </p>
+
 
             <div className="space-y-3 text-sm">
               {CONTACTS.email && (
@@ -392,95 +338,71 @@ export default function App() {
           </div>
 
           {/* Lado direito: formulário Netlify */}
-          {isRegClosed ? (
-            <div className="space-y-4 bg-white border border-gray-200 p-6 rounded-2xl">
-              <div className="p-4 rounded-xl border bg-yellow-50 text-yellow-900">
-                Registration is closed (deadline: {REG_DEADLINE.toLocaleString('pt-BR')})
-              </div>
-              <p className="text-sm text-gray-600">
-                If you believe this is a mistake, please contact the organization.
-              </p>
+          <form
+            name="registration"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/thanks.html"
+            className="space-y-4 bg-gray-150 border-gray-300 p-6 rounded-2xl border"
+          >
+            {/* obrigatório p/ Netlify Forms */}
+            <input type="hidden" name="form-name" value="registration" />
+            
+            {/* honeypot anti-bot */}
+            <p className="hidden">
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
+
+            {/* Nome + Email */}
+            <div className="grid sm:grid-cols-2 gap-4">
+              <input name="name" placeholder="Full name" className="rounded-2xl border px-3 py-2" required />
+              <input name="email" type="email" placeholder="E-mail" className="rounded-2xl border px-3 py-2" required />
             </div>
-          ) : (
-            <form
-              name="registration"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              action="/thanks_registration.html"
-              onSubmit={handleRegistrationSubmit}
-              className="space-y-4 bg-gray-150 border-gray-300 p-6 rounded-2xl border"
-            >
-              {/* obrigatório p/ Netlify Forms */}
-              <input type="hidden" name="form-name" value="registration" />
-              
-              {/* honeypot anti-bot */}
-              <p className="hidden">
-                <label>Don’t fill this out: <input name="bot-field" /></label>
-              </p>
 
-              {/* Nome + Email */}
-              <div className="grid sm:grid-cols-2 gap-4">
-                <input name="name" placeholder="Full name" className="rounded-2xl border px-3 py-2" required />
-                <input name="email" type="email" placeholder="E-mail" className="rounded-2xl border px-3 py-2" required />
-              </div>
+            {/* Afiliação + País */}
+            <div className="grid sm:grid-cols-2 gap-4">
+              <input name="affiliation" placeholder="Affiliation (University/Institution)" className="rounded-2xl border px-3 py-2" />
+              <input name="country" placeholder="Country" className="rounded-2xl border px-3 py-2" />
+            </div>
 
-              {/* Afiliação + País */}
-              <div className="grid sm:grid-cols-2 gap-4">
-                <input name="affiliation" placeholder="Affiliation (University/Institution)" className="rounded-2xl border px-3 py-2" />
-                <input name="country" placeholder="Country" className="rounded-2xl border px-3 py-2" />
-              </div>
 
-              {/* Categoria (mantido) */}
-              <div className="flex flex-col gap-2">
-                <label className="text-sm font-medium">Category</label>
-                <select
-                  name="category"
-                  className="rounded-2xl border px-3 py-2"
-                  defaultValue=""
-                  required
-                >
-                  <option value="" disabled>Select your category</option>
-                  <option>Undergraduate Student</option>
-                  <option>Graduate Student</option>
-                  <option>Master’s Student</option>
-                  <option>PhD Candidate</option>
-                  <option>Professor</option>
-                  <option>Researcher</option>
-                  <option>Other</option>
-                </select>
-              </div>
-
-              {/* Mensagem */}
-              <textarea
-                name="message"
-                placeholder="Message (optional)"
-                className="min-h-32 rounded-2xl border px-3 py-2 w-full"
-              />
-
-              {/* reCAPTCHA do Netlify (ative em Site → Forms → Settings) */}
-              <div data-netlify-recaptcha="true" className="my-3" />
-
-              {/* Erro de duplicidade/antibot */}
-              {regError && <p className="text-red-600 text-sm">{regError}</p>}
-
-              {/* Botão */}
-              <button
-                type="submit"
-                disabled={isRegClosed}
-                className="rounded-2xl px-4 py-2 bg-gray-900 text-white flex items-center gap-2 disabled:opacity-40"
+            {/* Categoria (novo) */}
+            <div className="flex flex-col gap-2">
+              <label className="text-sm font-medium">Category</label>
+              <select
+                name="category"
+                className="rounded-2xl border px-3 py-2"
+                defaultValue=""
+                required
               >
-                <Send className="w-4 h-4" /> Send
-              </button>
-            </form>
-          )}
+                <option value="" disabled>Select your category</option>
+                <option>Undergraduate Student</option>
+                <option>Graduate Student</option>
+                <option>Master’s Student</option>
+                <option>PhD Candidate</option>
+                <option>Professor</option>
+                <option>Researcher</option>
+                <option>Other</option>
+              </select>
+           </div>
+
+
+
+            {/* Mensagem */}
+            <textarea
+              name="message"
+              placeholder="Message (optional)"
+              className="min-h-32 rounded-2xl border px-3 py-2 w-full"
+            />
+
+            {/* Botão */}
+            <button type="submit" className="rounded-2xl px-4 py-2 bg-gray-900 text-white flex items-center gap-2">
+              <Send className="w-4 h-4" /> Send
+            </button>
+          </form>
         </div>
       </section>
-             
-
-
-
-
 
 
 
