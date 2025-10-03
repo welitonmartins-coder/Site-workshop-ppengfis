@@ -19,7 +19,7 @@ export const PROGRAM = {
     { "time": "09:00 - 09:40", "item": "OPENING – PPENGFIS COORDINATION", "type": "Opening" },
     { "time": "09:40 - 10:20", 
       "item": "PROF. LUIS ARTURO – IIT - UPE", 
-      "title": "To be announced", 
+      "title": "POTENCIALIDADES DO USO DA ENERGIA SOLAR", 
       "abstractUrl": "/talk-abstracts.html#luis-arturo-gomez-malagon" 
     },
     { "time": "10:20 - 10:40", 
@@ -33,7 +33,7 @@ export const PROGRAM = {
     },
     { "time": "11:20 - 12:00", 
       "item": "PROF. TATIANA PORTO – DMFA - UFRPE", 
-      "title": "To be announced", 
+      "title": "ENGENHARIA DE BIOPROCESSOS ENZIMÁTICOS: DO CULTIVO MICROBIANO À IMOBILIZAÇÃO DE ENZIMAS PARA APLICAÇÕES PRÁTICAS", 
       "abstractUrl": "/talk-abstracts.html#tatiana-souza-porto" 
     },
     { "time": "12:00 - 14:00", 
@@ -42,7 +42,7 @@ export const PROGRAM = {
     },
     { "time": "14:00 - 14:40", 
       "item": "PROF. WELITON SOARES MARTINS – UACSA - PPENGFIS - UFRPE", 
-      "title": "To be announced", 
+      "title": "FROM CHAOTIC DYNAMICS TO NONLINEAR PHOTONICS: STRUCTURED LIGHT AND MACHINE LEARNING IN OPTICAL CHARACTERIZATION", 
       "abstractUrl": "/talk-abstracts.html#weliton-soares-martins" 
     },
     { "time": "14:40 - 15:20", 
@@ -60,12 +60,12 @@ export const PROGRAM = {
   "Day 2": [
     { "time": "09:00 - 09:40", 
       "item": "PROF. YANA BATISTA BRANDÃO – UACSA - PPENGFIS - UFRPE", 
-      "title": "To be announced", 
+      "title": "TRATAMENTO DE ÁGUA POR PROCESSO DE OXIDAÇÃO AVANÇADA.", 
       "abstractUrl": "/talk-abstracts.html#yana-batista-brandao" 
     },
     { "time": "09:40 - 10:20", 
       "item": "MSc. ALLINY STEFANY DA SILVA ALVES – TERPHANE LTDA", 
-      "title": "To be announced", 
+      "title": "INOVAÇÃO EM EMBALAGENS PARA ALIMENTOS: DESAFIOS E OPORTUNIDADES EM ENGENHARIA DE MATERIAIS", 
       "abstractUrl": "/talk-abstracts.html#alliny-stefany-da-silva-alves" 
     },
     { "time": "10:20 - 10:40", 
@@ -87,7 +87,7 @@ export const PROGRAM = {
     },
     { "time": "14:00 - 14:40", 
       "item": "PROF. ITALO BOVE – UNIVERSIDAD DE LA REPÚBLICA", 
-      "title": "To be announced", 
+      "title": "LABORATÓRIO DE ENERGIA SOLAR TÉRMICA: FÍSICA APLICADA AO DESENVOLVIMENTO SUSTENTÁVEL", 
       "abstractUrl": "/talk-abstracts.html#italo-bove" 
     },
     { "time": "14:40 - 15:20", 
@@ -101,7 +101,7 @@ export const PROGRAM = {
     },
     { "time": "15:50 - 16:30", 
       "item": "PROF. ANDERSON STEVENS LEONIDAS GOMES – DF-UFPE", 
-      "title": "To be announced", 
+      "title": "A FÍSICA NA ENGENHARIA FÍSICA: DA FOTÔNICA LINEAR E NÃO LINEAR AOS SENSORES FOTÔNICOS.", 
       "abstractUrl": "/talk-abstracts.html#anderson-stevens-leonidas-gomes" 
     }
   ]
