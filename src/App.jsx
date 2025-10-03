@@ -407,6 +407,7 @@ export default function App() {
               method="POST"
               data-netlify="true"
               netlify-honeypot="bot-field"
+              data-netlify-recaptcha="true"
               action="/thanks_registration.html"
               onSubmit={handleRegistrationSubmit}
               className="space-y-4 bg-gray-150 border-gray-300 p-6 rounded-2xl border"
