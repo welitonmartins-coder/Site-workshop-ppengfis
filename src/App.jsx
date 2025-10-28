@@ -480,11 +480,6 @@ export default function App() {
              
 
 
-
-
-
-
-
       {/* /* Abstract Submission */}
       <section id="abstract-submission" className="mx-auto max-w-6xl px-4 py-16">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Abstract Submission</h2>

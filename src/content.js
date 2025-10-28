@@ -47,7 +47,7 @@ export const PROGRAM = {
     },
     { "time": "14:40 - 15:20", 
       "item": "PROF. SEVERINO JUNIOR – DQF - UFPE", 
-      "title": "To be announced", 
+      "title": "Da Química de Coordenação com íons Lantanídeos à Criação do Instituto Pernambucano de Pesquisa e Inovação Forense - IPEFOPEnced", 
       "abstractUrl": "/talk-abstracts.html#severino-alves-junior" 
     },
     { "time": "15:20 - 15:50", 
@@ -73,12 +73,12 @@ export const PROGRAM = {
       "type": "Break" },
     { "time": "10:40 - 11:20", 
       "item": "PROF. CARLOS JACINTO DA SILVA – IF - UFAL", 
-      "title": "To be announced", 
+      "title": "Luminescent Nanothermometry Across Scales: From Living Tissues to Acoustofluidic Microdevices", 
       "abstractUrl": "/talk-abstracts.html#carlos-jacinto-da-silva" 
     },
     { "time": "11:20 - 12:00", 
       "item": "DR. MILRIAN DA SILVA MENDES – SETUP INSTRUMENTS4LABS", 
-      "title": "To be announced", 
+      "title": "SETUP Instruments4Labs: Tecnologia de Ponta em Óptica, Fotônica e Materiais a partir de Recife", 
       "abstractUrl": "/talk-abstracts.html#milrian-da-silva-mendes" 
     },
     { "time": "12:00 - 14:00", 
