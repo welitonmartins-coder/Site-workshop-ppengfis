@@ -19,3 +19,4 @@ logs
 
 # Videos e imagens grandes
 # public/videos/
+.env
