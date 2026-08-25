@@ -7,7 +7,7 @@ import path from "node:path";
 import 'dotenv/config'; // carrega .env
 
 const API_KEY = process.env.RESEND_API_KEY;
-const MAIL_FROM = process.env.MAIL_FROM || 'VI Workshop <onboarding@resend.dev>';
+const MAIL_FROM = process.env.MAIL_FROM || 'VII Workshop <onboarding@resend.dev>';
 const REPLY_TO = process.env.REPLY_TO || 'workshop.ppengfis@ufrpe.br';
 
 if (!API_KEY) {
@@ -34,7 +34,7 @@ function buildHtml({ name, title }) {
       We are pleased to inform you that your work
       <strong>${safeTitle}</strong> was <strong>accepted</strong> for the
       <strong>Poster Session</strong> at the
-      <strong>VI International Workshop of the Graduate Program on Physics Engineering (PPENGFIS/UFRPE)</strong>.
+      <strong>VII International Workshop of the Graduate Program on Physics Engineering (PPENGFIS/UFRPE)</strong>.
     </p>
 
     <p><strong>Next steps:</strong></p>
@@ -65,7 +65,7 @@ for (const r of recipients) {
       from: MAIL_FROM,
       to,
       reply_to: REPLY_TO,
-      subject: "Poster acceptance – VI Workshop (PPENGFIS)",
+      subject: "Poster acceptance – VII Workshop (PPENGFIS)",
       html: buildHtml({ name: r.name, title: r.title }),
     }),
   });

@@ -3,7 +3,7 @@
 // Suporta os forms: "abstract" e "registration".
 // Requer variáveis de ambiente no Netlify:
 //   RESEND_API_KEY  (obrigatória)
-//   MAIL_FROM       (ex.: "VI Workshop <onboarding@resend.dev>" ou domínio verificado)
+//   MAIL_FROM       (ex.: "VII Workshop <onboarding@resend.dev>" ou domínio verificado)
 //   REPLY_TO        (ex.: "workshop.ppengfis@ufrpe.br")
 //   ADMIN_EMAIL     (opcional; recebe cópia das submissões)
 
@@ -20,7 +20,7 @@ export async function handler(event) {
     }
 
     const RESEND_API_KEY = process.env.RESEND_API_KEY;
-    const FROM = process.env.MAIL_FROM || "VI Workshop PPENGFIS <workshop@welitonprojetos.com>";
+    const FROM = process.env.MAIL_FROM || "VII Workshop PPENGFIS <workshop@welitonprojetos.com>";
     const REPLY_TO = process.env.REPLY_TO || "workshop.ppengfis@ufrpe.br";
     const ADMIN_EMAIL = (process.env.ADMIN_EMAIL || "").trim();
 
@@ -51,11 +51,11 @@ export async function handler(event) {
       const title = val(data.title);
       const abstractText = val(data.abstract, "");
 
-      subject = "Abstract received – VI Workshop (PPENGFIS)";
+      subject = "Abstract received – VII Workshop (PPENGFIS)";
       html = `
         <p>Hello ${name || "participant"},</p>
         <p>We have received your <strong>abstract submission</strong> for the
-        <strong>VI International Workshop – PPENGFIS</strong>.</p>
+        <strong>VII International Workshop – PPENGFIS</strong>.</p>
 
         <h3 style="margin:16px 0 6px 0;">Submission details</h3>
         <ul style="margin:0; padding-left:18px;">
@@ -84,7 +84,7 @@ export async function handler(event) {
       html = `
         <p>Hello ${name || "participant"},</p>
         <p>We have received your <strong>registration</strong> for the
-        <strong>VI International Workshop – PPENGFIS</strong>.</p>
+        <strong>VII International Workshop – PPENGFIS</strong>.</p>
         <p>We will contact you with updates. If you have questions, just reply to this message.</p>
         <p>Best regards,<br/>Organizing Committee – PPENGFIS/UFRPE</p>
       `;

@@ -7,7 +7,7 @@ import path from "node:path";
 import 'dotenv/config';
 
 const API_KEY = process.env.RESEND_API_KEY;
-const MAIL_FROM = process.env.MAIL_FROM || 'VI Workshop <onboarding@resend.dev>';
+const MAIL_FROM = process.env.MAIL_FROM || 'VII Workshop <onboarding@resend.dev>';
 const REPLY_TO = process.env.REPLY_TO || 'workshop.ppengfis@ufrpe.br';
 
 if (!API_KEY) {
@@ -55,7 +55,7 @@ function busHtml(name) {
 
     <p>
       Atenciosamente,<br/>
-      Organização do VI Workshop do PPENGFIS/UFRPE
+      Organização do VII Workshop do PPENGFIS/UFRPE
     </p>
   </div>
   `;

@@ -1,4 +1,4 @@
-# VI Workshop – PPENGFIS (Site)
+# VII Workshop – PPENGFIS (Site)
 
 Projeto React com Vite. Usa Tailwind via CDN para simplificar.
 

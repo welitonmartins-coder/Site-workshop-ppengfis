@@ -74,7 +74,7 @@ export default function App() {
               alt="PPENGFIS Logo"
               className="h-20 w-20 object-contain"
             />
-            <span className="font-semibold">VI Workshop – PPENGFIS</span>
+            <span className="font-semibold">VII Workshop – PPENGFIS</span>
           </div>
 
           <div className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
@@ -376,7 +376,7 @@ export default function App() {
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Registration</h2>
 
             <p className="text-slate-700 mb-4">
-              Participation in the <strong>VI International Workshop of the Graduate Program on Physics Engineering</strong>
+              Participation in the <strong>VII International Workshop of the Graduate Program on Physics Engineering</strong>
               is <strong>free of charge</strong>, but registration is required.
             </p>
 
@@ -541,7 +541,7 @@ export default function App() {
       {/* Footer */}
       <footer className="border-t border-slate-200">
         <div className="mx-auto max-w-6xl bg-white/70 px-4 py-8 text-sm text-slate-600 grid md:grid-cols-2 gap-3">
-          <p>© {new Date().getFullYear()} PPENGFIS • UFRPE • VI International Workshop</p>
+          <p>© {new Date().getFullYear()} PPENGFIS • UFRPE • VII International Workshop</p>
           <div className="flex gap-4 md:justify-end">
             <a href="#about" className="hover:underline">About</a>
             <a href="#program" className="hover:underline">Program</a>
