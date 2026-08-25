@@ -70,7 +70,7 @@ export async function handler(event) {
 
     } else if (formName === "registration") {
       const name = val(data.name);
-      subject = "Registration received – VI Workshop (PPENGFIS)";
+      subject = "Registration received – VII Workshop (PPENGFIS)";
       html = `
         <p>Hello ${name || "participant"},</p>
         <p>We have received your <strong>registration</strong> for the

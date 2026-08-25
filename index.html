@@ -5,9 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VI Workshop – PPENGFIS</title>
     <!-- Tailwind via CDN for simplicity in dev/build -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(20, 184, 166, 0.18), transparent 34rem),
+          radial-gradient(circle at 82% 12%, rgba(37, 99, 235, 0.14), transparent 30rem),
+          radial-gradient(circle at 18% 72%, rgba(245, 158, 11, 0.13), transparent 28rem),
+          radial-gradient(circle at 88% 80%, rgba(244, 63, 94, 0.10), transparent 24rem),
+          linear-gradient(180deg, #f8fafc 0%, #eef7f6 44%, #fff7ed 100%);
+      }
+
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.84);
+        backdrop-filter: blur(16px);
+      }
+
+      h1,
+      h2,
+      .display-font {
+        font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+      }
+    </style>
   </head>
-  <body class="min-h-screen text-gray-900 bg-fixed bg-cover bg-center" style="background-image: url('/img/background.jpg');">
+  <body class="min-h-screen text-slate-900">
 
 
     <!-- Netlify Forms: formulário oculto só para detecção no build -->

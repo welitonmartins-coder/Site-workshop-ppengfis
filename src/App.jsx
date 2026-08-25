@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Phone, Wrench, BookOpen, Send } from 'lucide-react'
 import { DATES, PROGRAM, SPEAKERS, VENUE, SPONSORS, CONTACTS, COMMITTEE} from './content';
 import ProgramSection from "./components/ProgramSection";
 
 // ⚠️ Ajuste as datas para seus prazos reais
-const REG_DEADLINE = new Date('2025-11-05T23:59:59-03:00'); // Registration deadline
-const ABS_DEADLINE = new Date('2025-11-02T23:59:59-03:00');  // Abstract deadline
+const REG_DEADLINE = new Date('2026-10-057T23:59:59-03:00'); // Registration deadline
+const ABS_DEADLINE = new Date('2026-09-25T23:59:59-03:00');  // Abstract deadline
 
 const now = new Date();
 const isRegClosed = now > REG_DEADLINE;
@@ -64,9 +64,9 @@ export default function App() {
 
 
   return (
-    <div className="min-h-screen bg-transparent text-gray-900">
+    <div className="min-h-screen bg-transparent text-slate-950 transition-colors">
       {/* Navbar */}
-      <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 bg-white/80 border-b">
+      <header className="sticky top-0 z-50 glass-nav border-b border-slate-200 shadow-sm">
         <nav className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img
@@ -77,15 +77,15 @@ export default function App() {
             <span className="font-semibold">VI Workshop – PPENGFIS</span>
           </div>
 
-          <div className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#about" className="hover:underline">About</a>
-            <a href="#dates" className="hover:underline">Dates</a>
-            <a href="#program" className="hover:underline">Program</a>
-            <a href="#speakers" className="hover:underline">Speakers</a>
-            <a href="#venue" className="hover:underline">Venue</a>
-            <a href="#sponsors" className="hover:underline">Sponsors</a>
-            <a href="#registration" className="hover:underline">Registration</a>
-            <a href="#abstract-submission" className="hover:underline">Abstract Submission</a>
+          <div className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+            <a href="#about" className="hover:text-teal-700 transition">About</a>
+            <a href="#dates" className="hover:text-teal-700 transition">Dates</a>
+            <a href="#program" className="hover:text-teal-700 transition">Program</a>
+            <a href="#speakers" className="hover:text-teal-700 transition">Speakers</a>
+            <a href="#venue" className="hover:text-teal-700 transition">Venue</a>
+            <a href="#sponsors" className="hover:text-teal-700 transition">Sponsors</a>
+            <a href="#registration" className="hover:text-teal-700 transition">Registration</a>
+            <a href="#abstract-submission" className="hover:text-teal-700 transition">Abstract Submission</a>
           </div>
           
           <div className="flex items-center gap-2">
@@ -97,7 +97,7 @@ export default function App() {
           </div>
           
           <div className="flex items-center gap-2">
-            <a href="#registration" className="px-4 py-2 rounded-2xl bg-gray-900 text-white hover:opacity-90">Register</a>
+            <a href="#registration" className="px-4 py-2 rounded-xl bg-teal-600 text-white font-medium shadow-sm hover:bg-teal-700 transition">Register</a>
           
           </div>
 
@@ -115,7 +115,7 @@ export default function App() {
       </div> */}
 
       <div className="max-w-6xl mx-auto px-4">
-        <div className="w-full h-35 sm:h-64 md:h-75 overflow-hidden rounded-2xl shadow-md">
+        <div className="w-full h-36 sm:h-64 md:h-72 overflow-hidden rounded-2xl border border-white/70 shadow-lg">
           <img
             src="/img/hero-bg.png"
             alt="Faixa Workshop"
@@ -139,20 +139,20 @@ export default function App() {
               className="space-y-6"
             >
 
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight text-gray-900">
-              VI International Workshop of the Graduate Program on Physics Engineering
+            <h1 className="text-4xl md:text-6xl font-extrabold leading-[1.12] tracking-tight bg-gradient-to-r from-slate-950 via-teal-700 to-blue-700 bg-clip-text text-transparent pb-1">
+              VII International Workshop of the Graduate Program on Physics Engineering
             </h1>
 
-            <p className="mt-6 text-lg md:text-xl text-gray-600">
+            <p className="mt-4 text-base md:text-lg text-slate-500">
               UFRPE • Graduate Program on Physics Engineering (PPENGFIS)
             </p>
             
-            <div className="flex gap-3">
-              <a href="#program" className="px-5 py-3 rounded-2xl bg-gray-900 text-white hover:opacity-80"> View Program
+            <div className="flex flex-wrap gap-3">
+              <a href="#program" className="px-5 py-3 rounded-xl bg-gradient-to-r from-teal-600 to-blue-600 text-white font-medium shadow-sm hover:from-teal-700 hover:to-blue-700 transition"> View Program
               </a>
-              <a href="#registration"className="px-5 py-3 rounded-2xl bg-gray-100 border border-gray-300 text-gray-900 hover:bg-gray-200" > Register now
+              <a href="#registration"className="px-5 py-3 rounded-xl bg-white border border-slate-200 text-slate-800 font-medium shadow-sm hover:border-teal-300 hover:text-teal-700 transition" > Register now
               </a>
-              <a href="#abstract-submission"className="px-5 py-3 rounded-2xl bg-gray-100 border border-gray-300 text-gray-900 hover:bg-gray-200" > Abstract Submission
+              <a href="#abstract-submission"className="px-5 py-3 rounded-xl bg-white border border-slate-200 text-slate-800 font-medium shadow-sm hover:border-teal-300 hover:text-teal-700 transition" > Abstract Submission
               </a>
             </div>
 
@@ -165,7 +165,7 @@ export default function App() {
               className="relative"
             >
 
-            <div className="mt-4 md:mt-6 w-full h-70 md:h-[320px] rounded-3xl border shadow-sm overflow-hidden">
+            <div className="mt-4 md:mt-6 w-full h-72 md:h-[320px] rounded-2xl border border-white/70 shadow-lg overflow-hidden">
               <video
                 src="/videos/apresentacao.mp4"
                 autoPlay
@@ -185,19 +185,19 @@ export default function App() {
 
           <div className= "mt-0 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 text-sm mx-auto max-w-6xl px-4 py-5">
             
-            <div className="rounded-2xl bg-gray-100 border  border-gray-300 p-4">
-              <p className="font-semibold text-gray-900">Dates</p>
-              <p className="text-gray-600">{DATES.find(d => /workshop/i.test(d.t))?.d || "12–13 Nov 2025"}</p>
+            <div className="rounded-xl bg-white/85 border border-slate-200 border-l-4 border-l-teal-500 p-4 shadow-sm">
+              <p className="font-semibold text-slate-950">Dates</p>
+              <p className="text-slate-600">{DATES.find(d => /workshop/i.test(d.t))?.d || "12–13 Nov 2025"}</p>
             </div>
             
-            <div className="rounded-2xl bg-gray-100 border  border-gray-300 p-4">
-              <p className="font-semibold text-gray-900">Location</p>
-              <p className="text-gray-600">{VENUE.address || "UFRPE/UACSA – PE"}</p>
+            <div className="rounded-xl bg-white/85 border border-slate-200 border-l-4 border-l-blue-500 p-4 shadow-sm">
+              <p className="font-semibold text-slate-950">Location</p>
+              <p className="text-slate-600">{VENUE.address || "UFRPE/UACSA – PE"}</p>
             </div>
             
-            <div className="rounded-2xl bg-gray-100 border  border-gray-300 p-4">
-              <p className="font-semibold text-gray-900">Format</p>
-              <p className="text-gray-600">In-person • Free</p>
+            <div className="rounded-xl bg-white/85 border border-slate-200 border-l-4 border-l-amber-500 p-4 shadow-sm">
+              <p className="font-semibold text-slate-950">Format</p>
+              <p className="text-slate-600">In-person • Free</p>
             </div>
           </div>
 
@@ -208,20 +208,20 @@ export default function App() {
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-4">About the Workshop</h2>
-            <p className="text-gray-700 leading-relaxed text-justify">
-              The VI International Workshop of the Graduate Program on Physics Engineering (PPENGFIS/UFRPE) 
+            <p className="text-slate-700 leading-relaxed text-justify">
+              The VII International Workshop of the Graduate Program on Physics Engineering (PPENGFIS/UFRPE) 
               brings together researchers, students and industry to discuss advances in material science and 
               engineering, optoelectronics and related fields. The event includes invited talks and poster sessions.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
-            <div className="rounded-2xl bg-gray-100 border border-gray-300 p-5">
-              <p className="text-base font-semibold flex items-center gap-2"><BookOpen className="w-4 h-4"/>Tracks</p>
-              <p className="text-sm text-gray-600 mt-2"> Optoelectronics, Materials Science and Engineering.</p>
+            <div className="rounded-xl bg-gradient-to-br from-white/90 to-teal-50/90 border border-teal-100 p-5 shadow-sm">
+              <p className="text-base font-semibold flex items-center gap-2"><BookOpen className="w-4 h-4 text-teal-600"/>Tracks</p>
+              <p className="text-sm text-slate-600 mt-2"> Optoelectronics, Materials Science and Engineering.</p>
             </div>
-            <div className="rounded-2xl bg-gray-100 border border-gray-300 p-5">
-              <p className="text-base font-semibold flex items-center gap-2"><Wrench className="w-4 h-4"/>Who should attend</p>
-              <p className="text-sm text-gray-600 mt-2">Graduate & undergraduate students, researchers, industry partners.</p>
+            <div className="rounded-xl bg-gradient-to-br from-white/90 to-amber-50/90 border border-amber-100 p-5 shadow-sm">
+              <p className="text-base font-semibold flex items-center gap-2"><Wrench className="w-4 h-4 text-amber-600"/>Who should attend</p>
+              <p className="text-sm text-slate-600 mt-2">Graduate & undergraduate students, researchers, industry partners.</p>
             </div>
           </div>
         </div>
@@ -233,7 +233,10 @@ export default function App() {
           <h2 className="text-2xl md:text-3xl font-bold mb-8">Important Dates</h2>
           <div className="grid md:grid-cols-4 gap-4">
             {DATES.map((k, i) => (
-              <div key={i} className="rounded-2xl bg-gray-100 border border-gray-300 p-5"><p className="font-semibold">{k.t}</p><p className="text-gray-600">{k.d}</p></div>
+              <div key={i} className={[
+                "rounded-xl bg-white/85 border p-5 shadow-sm",
+                ["border-teal-200 border-t-4 border-t-teal-500", "border-blue-200 border-t-4 border-t-blue-500", "border-amber-200 border-t-4 border-t-amber-500", "border-rose-200 border-t-4 border-t-rose-500"][i % 4],
+              ].join(" ")}><p className="font-semibold">{k.t}</p><p className="text-slate-600">{k.d}</p></div>
             ))}
           </div>
         </div>
@@ -251,14 +254,14 @@ export default function App() {
           <h2 className="text-2xl md:text-3xl font-bold mb-8">Invited Speakers</h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {SPEAKERS.map((sp, i) => (
-              <div key={i} className="rounded-2xl overflow-hidden border">
+              <div key={i} className="rounded-xl overflow-hidden border border-slate-200 bg-white/90 shadow-sm transition hover:-translate-y-1 hover:border-teal-200 hover:shadow-md">
                 {sp.photo
-                  ? <img src={sp.photo} alt={sp.name} className="aspect-square w-full object-contain border border-gray-300 bg-gray-150" />
-                  : <div className="aspect-square w-full bg-gray-150" />
+                  ? <img src={sp.photo} alt={sp.name} className="aspect-square w-full object-contain border-b border-slate-200 bg-slate-50" />
+                  : <div className="aspect-square w-full bg-slate-50" />
                 }
-                <div className="p-4 border border-gray-300">
+                <div className="p-4">
                   <p className="text-base font-semibold">{sp.name}</p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-slate-600">
                     {[sp.affiliation, sp.talk].filter(Boolean).join(" • ")}
                   </p>
                 </div>
@@ -271,16 +274,16 @@ export default function App() {
       {/* Venue */}
       <section id="venue" className="mx-auto max-w-6xl px-4 py-16">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Venue</h2>
-          <p className="text-gray-700 mb-6">{VENUE.address || "UFRPE – Recife, Pernambuco, Brazil."}</p>
+          <p className="text-slate-700 mb-6">{VENUE.address || "UFRPE – Recife, Pernambuco, Brazil."}</p>
           
-          <p className="text-gray-700 mb-6">
+          <p className="text-slate-700 mb-6">
             There will be a <strong>free university shuttle bus</strong>, departing from
             <strong> UFRPE Main Campus</strong> to <strong>UACSA</strong> and returning at the end of the day. 
             The website will be updated with more details for participants who wish to use the <strong> workshop transportation service</strong>.
           </p>
 
               {VENUE.map_url ? (
-                <div className="aspect-video w-full rounded-2xl border overflow-hidden">
+                <div className="aspect-video w-full rounded-xl border border-slate-200 overflow-hidden shadow-sm">
                   <iframe
                     src={VENUE.map_url}
                     className="w-full h-full"
@@ -289,14 +292,14 @@ export default function App() {
                   />
                 </div>
               ) : (
-                <div className="aspect-video w-full rounded-2xl border grid place-items-center">Map placeholder</div>
+                <div className="aspect-video w-full rounded-xl border border-slate-200 grid place-items-center bg-white/85">Map placeholder</div>
               )}
 
               {/* Bus Lines */}
                 <h3 className="mt-10 text-xl font-semibold mb-2">If you are not using the event shuttle bus, below are public transportation
                    options to reach the venue.</h3>
 
-                <div className="space-y-4 text-gray-700">
+                <div className="space-y-4 text-slate-700">
                   <div>
                     <p className="font-semibold">From Cabo Terminal (TI Cabo):</p>
                     <ul className="list-disc list-inside">
@@ -338,7 +341,7 @@ export default function App() {
                   {SPONSORS.length ? SPONSORS.map((s, i) => (
                     <div
                       key={i}
-                      className="flex items-center justify-center h-28 rounded-xl border p-2 bg-white"
+                      className="flex items-center justify-center h-28 rounded-xl border border-slate-200 p-2 bg-white/90 shadow-sm"
                     >
                       {s.logo ? (
                         <img
@@ -347,13 +350,13 @@ export default function App() {
                           className="max-h-20 object-contain"
                         />
                       ) : (
-                        <span className="text-sm text-gray-500">Logo</span>
+                        <span className="text-sm text-slate-500">Logo</span>
                       )}
                     </div>
                   )) : Array.from({ length: 8 }).map((_, i) => (
                     <div
                       key={i}
-                      className="flex items-center justify-center h-28 rounded-xl border p-2 bg-white text-sm text-gray-500"
+                      className="flex items-center justify-center h-28 rounded-xl border border-slate-200 p-2 bg-white/90 text-sm text-slate-500 shadow-sm"
                     >
                       Logo
                     </div>
@@ -372,7 +375,7 @@ export default function App() {
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Registration</h2>
 
-            <p className="text-gray-700 mb-4">
+            <p className="text-slate-700 mb-4">
               Participation in the <strong>VI International Workshop of the Graduate Program on Physics Engineering</strong>
               is <strong>free of charge</strong>, but registration is required.
             </p>
@@ -393,11 +396,11 @@ export default function App() {
 
           {/* Lado direito: formulário Netlify */}
           {isRegClosed ? (
-            <div className="space-y-4 bg-white border border-gray-200 p-6 rounded-2xl">
+            <div className="space-y-4 bg-white/90 border border-slate-200 p-6 rounded-xl shadow-sm">
               <div className="p-4 rounded-xl border bg-yellow-50 text-yellow-900">
                 Registration is closed (deadline: {REG_DEADLINE.toLocaleString('pt-BR')})
               </div>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-slate-600">
                 If you believe this is a mistake, please contact the organization.
               </p>
             </div>
@@ -410,7 +413,7 @@ export default function App() {
               data-netlify-recaptcha="true"
               action="/thanks_registration.html"
               onSubmit={handleRegistrationSubmit}
-              className="space-y-4 bg-gray-150 border-gray-300 p-6 rounded-2xl border"
+              className="space-y-4 bg-gradient-to-br from-white/95 to-teal-50/80 border-teal-100 p-6 rounded-xl border shadow-sm"
             >
               {/* obrigatório p/ Netlify Forms */}
               <input type="hidden" name="form-name" value="registration" />
@@ -422,14 +425,14 @@ export default function App() {
 
               {/* Nome + Email */}
               <div className="grid sm:grid-cols-2 gap-4">
-                <input name="name" placeholder="Full name" className="rounded-2xl border px-3 py-2" required />
-                <input name="email" type="email" placeholder="E-mail" className="rounded-2xl border px-3 py-2" required />
+                <input name="name" placeholder="Full name" className="rounded-xl border border-slate-200 px-3 py-2 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-100" required />
+                <input name="email" type="email" placeholder="E-mail" className="rounded-xl border border-slate-200 px-3 py-2 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-100" required />
               </div>
 
               {/* Afiliação + País */}
               <div className="grid sm:grid-cols-2 gap-4">
-                <input name="affiliation" placeholder="Affiliation (University/Institution)" className="rounded-2xl border px-3 py-2" />
-                <input name="country" placeholder="Country" className="rounded-2xl border px-3 py-2" />
+                <input name="affiliation" placeholder="Affiliation (University/Institution)" className="rounded-xl border border-slate-200 px-3 py-2 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-100" />
+                <input name="country" placeholder="Country" className="rounded-xl border border-slate-200 px-3 py-2 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-100" />
               </div>
 
               {/* Categoria (mantido) */}
@@ -437,7 +440,7 @@ export default function App() {
                 <label className="text-sm font-medium">Category</label>
                 <select
                   name="category"
-                  className="rounded-2xl border px-3 py-2"
+                  className="rounded-xl border border-slate-200 px-3 py-2 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-100"
                   defaultValue=""
                   required
                 >
@@ -456,7 +459,7 @@ export default function App() {
               <textarea
                 name="message"
                 placeholder="Message (optional)"
-                className="min-h-32 rounded-2xl border px-3 py-2 w-full"
+                className="min-h-32 rounded-xl border border-slate-200 px-3 py-2 w-full focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-100"
               />
 
               {/* reCAPTCHA do Netlify (ative em Site → Forms → Settings) */}
@@ -469,7 +472,7 @@ export default function App() {
               <button
                 type="submit"
                 disabled={isRegClosed}
-                className="rounded-2xl px-4 py-2 bg-gray-900 text-white flex items-center gap-2 disabled:opacity-40"
+                className="rounded-xl px-4 py-2 bg-gradient-to-r from-teal-600 to-blue-600 text-white font-medium flex items-center gap-2 shadow-sm hover:from-teal-700 hover:to-blue-700 transition disabled:opacity-40"
               >
                 <Send className="w-4 h-4" /> Send
               </button>
@@ -483,7 +486,7 @@ export default function App() {
       {/* /* Abstract Submission */}
       <section id="abstract-submission" className="mx-auto max-w-6xl px-4 py-16">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Abstract Submission</h2>
-        <p className="text-gray-700 mb-6">
+        <p className="text-slate-700 mb-6">
           Participants who wish to present their work must submit an abstract. 
           Use the link below to access the submission form. 
           The organizing committee will review all abstracts and provide feedback 
@@ -492,7 +495,7 @@ export default function App() {
 
         <a
           href="/abstract.html"
-          className="inline-block px-6 py-3 rounded-2xl bg-gray-900 text-white font-medium hover:opacity-90"
+          className="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-teal-600 to-blue-600 text-white font-medium shadow-sm hover:from-teal-700 hover:to-blue-700 transition"
         >
           Submit your Abstract
         </a>
@@ -506,8 +509,8 @@ export default function App() {
         {COMMITTEE?.length ? (
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {COMMITTEE.map((m, i) => (
-              <div key={i} className="rounded-2xl border border-gray-300 bg-transparent backdrop-blur p-5 flex flex-col items-center text-center">
-                <div className="w-28 h-28 rounded-full overflow-hidden ring-1 ring-gray-200 shadow-sm mb-4 bg-gray-100">
+              <div key={i} className="rounded-xl border border-slate-200 bg-white/80 backdrop-blur p-5 flex flex-col items-center text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+                <div className="w-28 h-28 rounded-full overflow-hidden ring-1 ring-slate-200 shadow-sm mb-4 bg-slate-100">
                   {m.photo ? (
                     <img
                       src={m.photo}
@@ -516,28 +519,28 @@ export default function App() {
                       loading="lazy"
                     />
                   ) : (
-                    <div className="w-full h-full grid place-items-center text-gray-400 text-xl">
+                    <div className="w-full h-full grid place-items-center text-slate-400 text-xl">
                       {m.name?.[0] ?? "?"}
                     </div>
                   )}
                 </div>
 
-                <p className="font-semibold text-gray-900">{m.name}</p>
-                {m.role && <p className="text-sm text-gray-700">{m.role}</p>}
-                {m.affiliation && <p className="text-xs text-gray-500 mt-1">{m.affiliation}</p>}
+                <p className="font-semibold text-slate-950">{m.name}</p>
+                {m.role && <p className="text-sm text-slate-700">{m.role}</p>}
+                {m.affiliation && <p className="text-xs text-slate-500 mt-1">{m.affiliation}</p>}
               </div>
             ))}
           </div>
         ) : (
-          <p className="text-gray-600">Committee will be announced soon.</p>
+          <p className="text-slate-600">Committee will be announced soon.</p>
         )}
       </section>
               
 
 
       {/* Footer */}
-      <footer className="border-t-300">
-        <div className="mx-auto max-w-6xl bg-gray-100 px-4 py-8 text-sm text-gray-600 grid md:grid-cols-2 gap-3">
+      <footer className="border-t border-slate-200">
+        <div className="mx-auto max-w-6xl bg-white/70 px-4 py-8 text-sm text-slate-600 grid md:grid-cols-2 gap-3">
           <p>© {new Date().getFullYear()} PPENGFIS • UFRPE • VI International Workshop</p>
           <div className="flex gap-4 md:justify-end">
             <a href="#about" className="hover:underline">About</a>
