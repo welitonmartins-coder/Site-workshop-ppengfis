@@ -5,6 +5,7 @@
 //   RESEND_API_KEY  (obrigatória)
 //   MAIL_FROM       (ex.: "VI Workshop <onboarding@resend.dev>" ou domínio verificado)
 //   REPLY_TO        (ex.: "workshop.ppengfis@ufrpe.br")
+//   ADMIN_EMAIL     (opcional; recebe cópia das submissões)
 
 export async function handler(event) {
   try {
@@ -19,8 +20,17 @@ export async function handler(event) {
     }
 
     const RESEND_API_KEY = process.env.RESEND_API_KEY;
-    const FROM = process.env.MAIL_FROM || "VI WorkshopPPENGFIS <workshop@welitonprojetos.com>";
+    const FROM = process.env.MAIL_FROM || "VI Workshop PPENGFIS <workshop@welitonprojetos.com>";
     const REPLY_TO = process.env.REPLY_TO || "workshop.ppengfis@ufrpe.br";
+    const ADMIN_EMAIL = (process.env.ADMIN_EMAIL || "").trim();
+
+    if (!RESEND_API_KEY) {
+      console.error("Missing RESEND_API_KEY environment variable.");
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: "Missing RESEND_API_KEY" }),
+      };
+    }
 
     // Helpers de formatação (escapes simples e fallback)
     const val = (x, fb = "—") => (x && String(x).trim()) || fb;
@@ -93,7 +103,7 @@ export async function handler(event) {
       },
       body: JSON.stringify({
         from: FROM,
-        to,
+        to: ADMIN_EMAIL ? [to, ADMIN_EMAIL] : to,
         subject,
         html,
         reply_to: REPLY_TO,
