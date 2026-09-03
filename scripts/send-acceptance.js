@@ -34,7 +34,7 @@ function buildHtml({ name, title }) {
       We are pleased to inform you that your work
       <strong>${safeTitle}</strong> was <strong>accepted</strong> for the
       <strong>Poster Session</strong> at the
-      <strong>VII International Workshop of the Graduate Program on Physics Engineering (PPENGFIS/UFRPE)</strong>.
+      <strong>VII International Workshop of the Graduate Program in Physics Engineering (PPENGFIS/UFRPE)</strong>.
     </p>
 
     <p><strong>Next steps:</strong></p>

@@ -140,11 +140,11 @@ export default function App() {
             >
 
             <h1 className="text-4xl md:text-6xl font-extrabold leading-[1.12] tracking-tight bg-gradient-to-r from-slate-950 via-teal-700 to-blue-700 bg-clip-text text-transparent pb-1">
-              VII International Workshop of the Graduate Program on Physics Engineering
+              VII International Workshop of the Graduate Program in Physics Engineering
             </h1>
 
             <p className="mt-4 text-base md:text-lg text-slate-500">
-              UFRPE • Graduate Program on Physics Engineering (PPENGFIS)
+              UFRPE • Graduate Program in Physics Engineering (PPENGFIS)
             </p>
             
             <div className="flex flex-wrap gap-3">
@@ -209,18 +209,18 @@ export default function App() {
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-4">About the Workshop</h2>
             <p className="text-slate-700 leading-relaxed text-justify">
-              The VII International Workshop of the Graduate Program on Physics Engineering (PPENGFIS/UFRPE) 
+              The VII International Workshop of the Graduate Program in Physics Engineering (PPENGFIS/UFRPE)
               brings together researchers, students and industry to discuss advances in material science and 
               engineering, optoelectronics and related fields. The event includes invited talks and poster sessions.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="rounded-xl bg-gradient-to-br from-white/90 to-teal-50/90 border border-teal-100 p-5 shadow-sm">
-              <p className="text-base font-semibold flex items-center gap-2"><BookOpen className="w-4 h-4 text-teal-600"/>Tracks</p>
+              <p className="text-base font-semibold flex items-center gap-2"><BookOpen className="w-4 h-4 text-teal-600"/>Topics</p>
               <p className="text-sm text-slate-600 mt-2"> Optoelectronics, Materials Science and Engineering.</p>
             </div>
             <div className="rounded-xl bg-gradient-to-br from-white/90 to-amber-50/90 border border-amber-100 p-5 shadow-sm">
-              <p className="text-base font-semibold flex items-center gap-2"><Wrench className="w-4 h-4 text-amber-600"/>Who should attend</p>
+              <p className="text-base font-semibold flex items-center gap-2"><Wrench className="w-4 h-4 text-amber-600"/>Target audience</p>
               <p className="text-sm text-slate-600 mt-2">Graduate & undergraduate students, researchers, industry partners.</p>
             </div>
           </div>
@@ -376,7 +376,7 @@ export default function App() {
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Registration</h2>
 
             <p className="text-slate-700 mb-4">
-              Participation in the <strong>VII International Workshop of the Graduate Program on Physics Engineering</strong>
+              Participation in the <strong>VII International Workshop of the Graduate Program in Physics Engineering</strong>
               is <strong>free of charge</strong>, but registration is required.
             </p>
 

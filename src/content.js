@@ -18,7 +18,7 @@ export const DATES = [
 //   "Day 1": [
 //     { "time": "09:00 - 09:40", "item": "OPENING – PPENGFIS COORDINATION", "type": "Opening" },
 //     { "time": "09:40 - 10:20",
-//       "item": "PROF. LUIS ARTURO – IIT - UPE",
+//       "item": "PROF. DR. LUIS ARTURO – IIT - UPE",
 //       "title": "POTENCIALIDADES DO USO DA ENERGIA SOLAR",
 //       "abstractUrl": "/talk-abstracts.html#luis-arturo-gomez-malagon"
 //     },
@@ -32,7 +32,7 @@ export const DATES = [
 //       "abstractUrl": "/talk-abstracts.html#igor-alessandro-silva-carvalho"
 //     },
 //     { "time": "11:20 - 12:00",
-//       "item": "PROF. TATIANA PORTO – DMFA - UFRPE",
+//       "item": "PROF. DR. TATIANA PORTO – DMFA - UFRPE",
 //       "title": "ENGENHARIA DE BIOPROCESSOS ENZIMÁTICOS: DO CULTIVO MICROBIANO À IMOBILIZAÇÃO DE ENZIMAS PARA APLICAÇÕES PRÁTICAS",
 //       "abstractUrl": "/talk-abstracts.html#tatiana-souza-porto"
 //     },
@@ -41,12 +41,12 @@ export const DATES = [
 //       "type": "Break"
 //     },
 //     { "time": "14:00 - 14:40",
-//       "item": "PROF. WELITON SOARES MARTINS – UACSA - PPENGFIS - UFRPE",
+//       "item": "PROF. DR. WELITON SOARES MARTINS – UACSA - PPENGFIS - UFRPE",
 //       "title": "FROM CHAOTIC DYNAMICS TO NONLINEAR PHOTONICS: STRUCTURED LIGHT AND MACHINE LEARNING IN OPTICAL CHARACTERIZATION",
 //       "abstractUrl": "/talk-abstracts.html#weliton-soares-martins"
 //     },
 //     { "time": "14:40 - 15:20",
-//       "item": "PROF. SEVERINO JUNIOR – DQF - UFPE",
+//       "item": "PROF. DR. SEVERINO JUNIOR – DQF - UFPE",
 //       "title": "Da Química de Coordenação com íons Lantanídeos à Criação do Instituto Pernambucano de Pesquisa e Inovação Forense - IPEFOPEnced",
 //       "abstractUrl": "/talk-abstracts.html#severino-alves-junior"
 //     },
@@ -59,7 +59,7 @@ export const DATES = [
 //   ],
 //   "Day 2": [
 //     { "time": "09:00 - 09:40",
-//       "item": "PROF. YANA BATISTA BRANDÃO – UACSA - PPENGFIS - UFRPE",
+//       "item": "PROF. DR. YANA BATISTA BRANDÃO – UACSA - PPENGFIS - UFRPE",
 //       "title": "TRATAMENTO DE ÁGUA POR PROCESSO DE OXIDAÇÃO AVANÇADA.",
 //       "abstractUrl": "/talk-abstracts.html#yana-batista-brandao"
 //     },
@@ -72,7 +72,7 @@ export const DATES = [
 //       "item": "COFFEE BREAK",
 //       "type": "Break" },
 //     { "time": "10:40 - 11:20",
-//       "item": "PROF. CARLOS JACINTO DA SILVA – IF - UFAL",
+//       "item": "PROF. DR. CARLOS JACINTO DA SILVA – IF - UFAL",
 //       "title": "Luminescent Nanothermometry Across Scales: From Living Tissues to Acoustofluidic Microdevices",
 //       "abstractUrl": "/talk-abstracts.html#carlos-jacinto-da-silva"
 //     },
@@ -86,12 +86,12 @@ export const DATES = [
 //       "type": "Break"
 //     },
 //     { "time": "14:00 - 14:40",
-//       "item": "PROF. ITALO BOVE – UNIVERSIDAD DE LA REPÚBLICA",
+//       "item": "PROF. DR. ITALO BOVE – UNIVERSIDAD DE LA REPÚBLICA",
 //       "title": "LABORATÓRIO DE ENERGIA SOLAR TÉRMICA: FÍSICA APLICADA AO DESENVOLVIMENTO SUSTENTÁVEL",
 //       "abstractUrl": "/talk-abstracts.html#italo-bove"
 //     },
 //     { "time": "14:40 - 15:20",
-//       "item": "PROF. EDSON CAVALCANTI DA SILVA FILHO – DQ - UFPI",
+//       "item": "PROF. DR. EDSON CAVALCANTI DA SILVA FILHO – DQ - UFPI",
 //       "title": "Hidrogéis à base de polissacarídeos naturais: potencialidades e aplicações",
 //       "abstractUrl": "/talk-abstracts.html#edson-cavalcanti-da-silva-filho"
 //     },
@@ -100,7 +100,7 @@ export const DATES = [
 //       "type": "Break"
 //     },
 //     { "time": "15:50 - 16:30",
-//       "item": "PROF. ANDERSON STEVENS LEONIDAS GOMES – DF-UFPE",
+//       "item": "PROF. DR. ANDERSON STEVENS LEONIDAS GOMES – DF-UFPE",
 //       "title": "A FÍSICA NA ENGENHARIA FÍSICA: DA FOTÔNICA LINEAR E NÃO LINEAR AOS SENSORES FOTÔNICOS.",
 //       "abstractUrl": "/talk-abstracts.html#anderson-stevens-leonidas-gomes"
 //     }
@@ -110,56 +110,56 @@ export const DATES = [
 export const PROGRAM = {
   "Day 1 - 21/10": [
     {
-      time: "09:00 - 09:40",
-      item: "PROF. ALBERT STEVENS REYNA OCAS",
+      time: "09:00 - 09:30",
+      item: "PROF. DR. ALBERT STEVENS REYNA OCAS",
       title: "OPENING – PPENGFIS COORDINATION",
       type: "Opening",
     },
     {
-      time: "09:40 - 10:20",
-      item: "PROF. LEONARDO MENEZES – ??",
+      time: "09:30 - 10:10",
+      item: "PROF. DR. LEONARDO DE SOUZA MENEZES – DF/UFPE",
       title: "Quasi-bound States in the Continuum-Based Tunable Metasurfaces",
       "abstractUrl": "/talk-abstracts.html#leonardo-menezes"
     },
     {
-      time: "10:20 - 10:40",
+      time: "10:10 - 10:30",
       item: "COFFEE BREAK",
       type: "Break",
     },
     {
-      time: "10:40 - 11:30",
-      item: "DR. JOSY OSSARIMA – UFPI",
+      time: "10:30 - 11:20",
+      item: "PROF. DR. JOSY ANTEVELI OSAJIMA FURTINI – UFPI",
       title: "The Influence of Light on Clay Materials as Drug Carriers and in Environmental Remediation: Photodegradation or Photostability?",
       abstractUrl: "/talk-abstracts.html#josy-ossarima",
     },
     {
-      time: "11:30 - 12:20",
-      item: "PROF. ANDRÉ MOURA – UFAL",
+      time: "11:20 - 12:10",
+      item: "PROF. DR. ANDRÉ MOURA – UFAL",
       title: "From Photoluminescence to Nonlinear Phenomena: New Perspectives on Rare-Earth-Doped Materials",
       abstractUrl: "/talk-abstracts.html#andre-moura",
     },
     {
-      time: "12:20 - 14:20",
+      time: "12:10 - 14:20",
       item: "LUNCH",
       type: "Break",
     },
     {
       time: "14:20 - 14:40",
-      item: "NAME",
+      item: "ALEXSANDRO DOS SANTOS LINS – UFPE/PGMTR",
       title: "Exploring the Functional Properties of ZnO: From Photocatalysis to Spin Dynamics",
       type: "ALUMNUS",
-      abstractUrl: "/talk-abstracts.html#name",
+      abstractUrl: "/talk-abstracts.html#alexsandro-dos-santos-lins",
     },
     {
       time: "14:40 - 15:00",
-      item: " MR. ALESSANDRO",
+      item: "WILLAMS APOLO SANTOS ALBUQUERQUE – UFPE/PGMTR",
       title: "ZnO- and Clay-Based Photocatalysts for Wastewater Treatment",
       type: "ALUMNUS",
-      abstractUrl: "/talk-abstracts.html#alessandro",
+      abstractUrl: "/talk-abstracts.html#willams-apolo-santos-albuquerque",
     },
     {
       time: "15:00 - 15:40",
-      item: "PROF. AMANDA SOUZA DE PAULA – UFRPE/UACSA",
+      item: "PROF. DR. AMANDA SOUZA DE PAULA – UFRPE/UACSA",
       title: "Optical Machine Learning",
       abstractUrl: "/talk-abstracts.html#amanda-souza-paula",
     },
@@ -170,7 +170,7 @@ export const PROGRAM = {
     },
     {
       time: "16:00 - 16:50",
-      item: "PROF. RAMÓN RAUDEL PEÑA GARCIA – UFRPE/UACSA",
+      item: "PROF. DR. RAMÓN RAUDEL PEÑA GARCIA – UFRPE/UACSA",
       title: "What Can Universities Do About Water Pollution? Photocatalytic Materials as Part of the Answer",
       abstractUrl: "/talk-abstracts.html#ramón-raudel-peña-garcia",
     },
@@ -178,24 +178,16 @@ export const PROGRAM = {
 
   "Day 2 - 22/10": [
     {
-      time: "09:00 - 09:40",
+      time: "09:00 - 09:30",
       item: "DR. IGOR ALESSANDRO SILVA CARVALHO – HORIBA",
       title: "Raman e NanoRaman/Nanofotoluminescência: espectroscopia multimodal colocalizada para caracterização físico-química de amostras",
       abstractUrl: "/talk-abstracts.html#igor-alessandro-silva-carvalho",
     },
     {
-      time: "09:40 - 10:00",
-      item: "MR. ALLAN BARBOZA",
-      title: "Quantitative Lensless On-Chip Microscopy Based on Quadriwave Lateral Shearing Interferometry",
-      type: "ALUMNUS",
-      abstractUrl: "/talk-abstracts.html#allan-barboza",
-    },
-    {
-      time: "10:00 - 10:20",
-      item: "MR. VICTOR ADONY ALVES SANTOS",
-      title: "Presentation title: To be announced (TBA)",
-      type: "ALUMNUS",
-      abstractUrl: "/talk-abstracts.html#victor-adony-alves-santos",
+      time: "09:30 - 10:20",
+      item: "PROF. DR. SABINO CHÁVEZ-CERDA – INAOE, MEXICO",
+      title: "The Misunderstood Bessel Beams (and Many Other Beams Nowadays)",
+      abstractUrl: "/talk-abstracts.html#sabino-chavez-cerda",
     },
     {
       time: "10:20 - 10:40",
@@ -204,13 +196,13 @@ export const PROGRAM = {
     },
     {
       time: "10:40 - 11:30",
-      item: "PROF. MARIA DEL MAR ORTA – US",
+      item: "DR. MARÍA DEL MAR ORTA – UNIVERSITY OF SEVILLE, SPAIN",
       title: "Clay Minerals for Drug Delivery and Environmental Remediation",
       abstractUrl: "/talk-abstracts.html#maria-del-mar-orta",
     },
     { 
       time: "11:30 - 12:20",
-      item: "ASSIST. RES. NUNO AZEVEDO SILVA – INESC TEC",
+      item: "DR. NUNO AZEVEDO SILVA – INESC TEC, PORTUGAL",
       title: "Presentation title: To be announced (TBA)",
       abstractUrl: "/talk-abstracts.html#nuno-azevedo-silva",
     },
@@ -220,18 +212,20 @@ export const PROGRAM = {
       type: "Break",
     },
     {
-      time: "14:20 - 15:40",
+      time: "14:20 - 14:40",
+      item: "ALLAN BARBOZA – PPGEE/UFPE, BRAZIL",
+      title: "Quantitative Lensless On-Chip Microscopy Based on Quadriwave Lateral Shearing Interferometry",
+      type: "ALUMNUS",
+      abstractUrl: "/talk-abstracts.html#allan-barboza",
+    },
+    {
+      time: "14:40 - 16:00",
       item: "LAB VISITS AND POSTER PRESENTATIONS",
       type: "Poster",
     },
     {
-      time: "15:40 - 16:00",
-      item: "COFFEE BREAK",
-      type: "Break",
-    },
-    {
       time: "16:00 - 16:50",
-      item: "PROF. DANIEL FELINTO – UFPE",
+      item: "PROF. DR. DANIEL FELINTO – UFPE",
       title:
         "Light-Matter Quantum Correlations and the Development of Quantum Technologies in Recife, Brazil",
       abstractUrl: "/talk-abstracts.html#daniel-felinto",
@@ -243,52 +237,52 @@ export const PROGRAM = {
 
 export const SPEAKERS = [
   {
-    "name": "PROF. ALBERT STEVENS REYNA OCAS",
+    "name": "PROF. DR. ALBERT STEVENS REYNA OCAS",
     "affiliation": "UACSA - PPENGFIS - UFRPE",
     "talk": "",
     "photo": "/img/speaker-albert.jpg"
   },
   {
-    "name": "PROF. LEONARDO MENEZES",
-    "affiliation": "???",
+    "name": "PROF. DR. LEONARDO DE SOUZA MENEZES",
+    "affiliation": "DF/UFPE - BRAZIL",
     "talk": "",
     "photo": "/img/speaker-leonardo.png"
   },
   {
-    "name": "DR. JOSY OSSARIMA",
-    "affiliation": "UFPI",
+    "name": "PROF. DR. JOSY ANTEVELI OSAJIMA FURTINI",
+    "affiliation": "UFPI - BRAZIL",
     "talk": "",
-    "photo": "/img/speaker-josy.jpg"
+    "photo": null
   },
   {
-    "name": "PROF. ANDRÉ MOURA",
+    "name": "PROF. DR. ANDRÉ MOURA",
     "affiliation": "UFAL",
     "talk": "",
     "photo": "/img/speaker-andre.jpeg"
   },  
   {
-    "name": "NAME",
-    "affiliation": "ALUMNUS",
+    "name": "ALEXSANDRO DOS SANTOS LINS",
+    "affiliation": "UFPE/PGMTR - ALUMNUS",
     "talk": "",
-    "photo": "/img/speaker-name.jpeg"
+    "photo": null
   },
   {
-    "name": "MR. ALESSANDRO",
-    "affiliation": "ALUMNUS",
+    "name": "WILLAMS APOLO SANTOS ALBUQUERQUE",
+    "affiliation": "UFPE/PGMTR - ALUMNUS",
     "talk": "",
-    "photo": "/img/speaker-alessandro.jpeg"
+    "photo": null
   },
   {
-    "name": "PROF. AMANDA SOUZA DE PAULA",
+    "name": "PROF. DR. AMANDA SOUZA DE PAULA",
     "affiliation": "UFRPE/UACSA",
     "talk": "",
     "photo": "/img/speaker-amanda.jpeg"
   },
   {
-    "name": "PROF. RAMÓN RAUDEL PEÑA GARCIA",
-    "affiliation": "UFRPE/UACSA",
+    "name": "PROF. DR. RAMÓN RAUDEL PEÑA GARCIA",
+    "affiliation": "UFRPE/UACSA - BRAZIL",
     "talk": "",
-    "photo": "/img/speaker-ramon.jpeg"
+    "photo": "/img/speaker-ramon.png"
   },
   {
     "name": "DR. IGOR ALESSANDRO SILVA CARVALHO",
@@ -297,39 +291,39 @@ export const SPEAKERS = [
     "photo": "/img/speaker-igor.jpg"
   },
   {
-    "name": "MR. ALLAN BARBOZA",
-    "affiliation": "ALUMNUS",
+    "name": "ALLAN BARBOZA",
+    "affiliation": "PPGEE/UFPE - BRAZIL - ALUMNUS",
     "talk": "",
     "photo": "/img/speaker-allan.jpeg"
   },
   {
-    "name": "MR. VICTOR ADONY ALVES SANTOS",
-    "affiliation": "ALUMNUS",
-    "talk": "",
-    "photo": "/img/speaker-victor.jpg"
-  },
-  {
-    "name": "PROF. MARIA DEL MAR ORTA",
-    "affiliation": "US",
+    "name": "DR. MARÍA DEL MAR ORTA",
+    "affiliation": "UNIVERSITY OF SEVILLE - SPAIN",
     "talk": "",
     "photo": "/img/speaker-maria.jpeg"
   },
   {
-    "name": "ASSIST. RES. NUNO AZEVEDO SILVA",
-    "affiliation": "INESC TEC",
+    "name": "DR. NUNO AZEVEDO SILVA",
+    "affiliation": "INESC TEC - PORTUGAL",
     "talk": "",
-    "photo": "/img/speaker-nuno.jpg"
+    "photo": null
   },
   {
-    "name": "PROF. DANIEL FELINTO – UFPE",
-    "affiliation": "DF - UFPE",
+    "name": "PROF. DR. SABINO CHÁVEZ-CERDA",
+    "affiliation": "INAOE - MEXICO",
+    "talk": "",
+    "photo": null
+  },
+  {
+    "name": "PROF. DR. DANIEL FELINTO",
+    "affiliation": "DF/UFPE - BRAZIL",
     "talk": "",
     "photo": "/img/speaker-daniel.jpeg"
   }
 ];
 
 export const VENUE = {
-  "address": "UFRPE - UACSA - PPENGFIS: R. Cento e Sessenta e TrÃªs, 300 - Cohab, Cabo de Santo Agostinho - PE, Brazil.",
+  "address": "UFRPE - UACSA - PPENGFIS: Rua Cento e Sessenta e Três, 300 - Cohab, Cabo de Santo Agostinho - PE, Brazil.",
   "map_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.0104378031715!2d-35.023759999999996!3d-8.301758999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aaefc2767bf9a3%3A0xda4914c2766ec88d!2sUFRPE%20-%20UACSA!5e0!3m2!1sen!2sbr!4v1757762202508!5m2!1sen!2sbr"
 };
 
@@ -367,24 +361,31 @@ export const CONTACTS = {
 // --- Organizing Committee ---
 export const COMMITTEE = [
    {
-    name: "Prof. Martine chevrollier",
+    name: "Prof. Dr. Martine chevrollier",
     role: "Workshop Coordinator",
     // affiliation: "PPENGFIS / UFRPE",
     photo: "/img/committee/martine.png",
   },
   {
-    name: "Prof. Ramón Raudel Peña Garcia ",
+    name: "Prof. Dr. Ramón Raudel Peña Garcia ",
     // role: "General Chair",
     // affiliation: "PPENGFIS / UFRPE",
     photo: "/img/committee/ramon.png", // coloque o arquivo em public/img/committee/
   },
   {
-    name: "Prof. Weliton Soares Martins",
+    name: "Prof. Dr. Weliton Soares Martins",
     // role: "Local Arrangements",
     // affiliation: "PPENGFIS / UFRPE",
     photo: "/img/committee/weliton.png",
   },
-  // ...adicione quantos quiser
+  {
+    name: "Docente - Maria Clara Ferreira dos Santos",
+    photo: "/img/committee/maria_clara.jpeg",
+  },
+  {
+    name: "Docente - João Pedro Lima",
+    photo: "/img/committee/joao.jpeg",
+  },
     {
     name: "Discente - Jefferson Lima",
     // role: "Local Arrangements",
