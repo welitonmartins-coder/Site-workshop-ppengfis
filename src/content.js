@@ -264,13 +264,13 @@ export const SPEAKERS = [
     "name": "ALEXSANDRO DOS SANTOS LINS",
     "affiliation": "UFPE/PGMTR - ALUMNUS",
     "talk": "",
-    "photo": null
+    "photo": "/img/speaker-alexsandro.jpeg"
   },
   {
     "name": "WILLAMS APOLO SANTOS ALBUQUERQUE",
     "affiliation": "UFPE/PGMTR - ALUMNUS",
     "talk": "",
-    "photo": null
+    "photo": "/img/speaker-apolo.jpeg"
   },
   {
     "name": "PROF. DR. AMANDA SOUZA DE PAULA",
@@ -306,13 +306,13 @@ export const SPEAKERS = [
     "name": "DR. NUNO AZEVEDO SILVA",
     "affiliation": "INESC TEC - PORTUGAL",
     "talk": "",
-    "photo": null
+    "photo": "/img/speaker-nuno.jpeg"
   },
   {
     "name": "PROF. DR. SABINO CHÁVEZ-CERDA",
     "affiliation": "INAOE - MEXICO",
     "talk": "",
-    "photo": null
+    "photo": "/img/speaker-sabino.jpeg"
   },
   {
     "name": "PROF. DR. DANIEL FELINTO",
@@ -379,11 +379,11 @@ export const COMMITTEE = [
     photo: "/img/committee/weliton.png",
   },
   {
-    name: "Docente - Maria Clara Ferreira dos Santos",
+    name: "Discente - Maria Clara Ferreira dos Santos",
     photo: "/img/committee/maria_clara.jpeg",
   },
   {
-    name: "Docente - João Pedro Lima",
+    name: "Discente - João Pedro Lima",
     photo: "/img/committee/joao.jpeg",
   },
     {
