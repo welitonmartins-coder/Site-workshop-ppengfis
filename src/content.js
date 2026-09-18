@@ -203,7 +203,7 @@ export const PROGRAM = {
     { 
       time: "11:30 - 12:20",
       item: "DR. NUNO AZEVEDO SILVA – INESC TEC, PORTUGAL",
-      title: "Presentation title: To be announced (TBA)",
+      title: "Optical Extreme Learning Machines: from fundamentals, to experimental platforms and applications",
       abstractUrl: "/talk-abstracts.html#nuno-azevedo-silva",
     },
     {
@@ -252,7 +252,7 @@ export const SPEAKERS = [
     "name": "PROF. DR. JOSY ANTEVELI OSAJIMA FURTINI",
     "affiliation": "UFPI - BRAZIL",
     "talk": "",
-    "photo": null
+    "photo": "/img/speaker-josy.png"
   },
   {
     "name": "PROF. DR. ANDRÉ MOURA",
