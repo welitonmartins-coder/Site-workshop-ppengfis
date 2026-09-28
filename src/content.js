@@ -6,11 +6,11 @@ export const DATES = [
   },
   {
     "t": "Registration deadline",
-    "d": "07 - Oct - 2026"
+    "d": "19 - Oct - 2026"
   },
   {
     "t": "Abstract submission deadline",
-    "d": "25 - Sept - 2026"
+    "d": "15 - Oct - 2026"
   }
 ];
 

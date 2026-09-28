@@ -5,8 +5,8 @@ import { DATES, PROGRAM, SPEAKERS, VENUE, SPONSORS, CONTACTS, COMMITTEE} from '.
 import ProgramSection from "./components/ProgramSection";
 
 // ⚠️ Ajuste as datas para seus prazos reais
-const REG_DEADLINE = new Date('2026-10-057T23:59:59-03:00'); // Registration deadline
-const ABS_DEADLINE = new Date('2026-09-25T23:59:59-03:00');  // Abstract deadline
+const REG_DEADLINE = new Date('2026-10-19T23:59:59-03:00'); // Registration deadline
+const ABS_DEADLINE = new Date('2026-10-15T23:59:59-03:00'); // Abstract deadline
 
 const now = new Date();
 const isRegClosed = now > REG_DEADLINE;
