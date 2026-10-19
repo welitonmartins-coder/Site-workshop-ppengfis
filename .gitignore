@@ -20,3 +20,5 @@ logs
 # Videos e imagens grandes
 # public/videos/
 .env
+netlify/private/
+.corrections-local/

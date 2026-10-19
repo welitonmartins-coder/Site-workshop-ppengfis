@@ -3,3 +3,6 @@
   publish = "dist"
   functions = "netlify/functions"
 
+[functions."abstract-corrections"]
+  included_files = ["netlify/data/corrections-roster.enc.json"]
+

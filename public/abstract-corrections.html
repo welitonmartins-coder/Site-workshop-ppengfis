@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta name="robots" content="noindex,nofollow"><title>Correções de resumos · VII Workshop PPENGFIS</title><link rel="stylesheet" href="/corrections.css"><script src="/corrections.js" defer></script></head>
+<body>
+<header><a href="/" class="brand"><img src="/img/logo-ppengfis.png" alt="PPENGFIS"><span>VII WORKSHOP INTERNACIONAL<small>Engenharia Física · UFRPE</small></span></a><a href="/" class="back">← Voltar ao site</a></header>
+<main>
+<div class="eyebrow">LIVRO DE RESUMOS · EDIÇÃO 2026</div>
+<div class="intro"><div><h1>Seu trabalho aprovado.<br><em>Agora, a versão final.</em></h1><p>Envie o resumo revisado para compor o livro do workshop.<br>As correções ajudam a apresentar sua pesquisa com clareza.</p></div><div class="date"><span>ENVIE ATÉ</span><strong>30<span>OUT</span></strong><small>2026 · horário de Fortaleza</small></div></div>
+<div id="preview" class="preview" hidden>Demonstração local com dados fictícios. Nenhum envio real será realizado.</div>
+<div class="layout"><aside><h2>Como funciona</h2><ol><li><b>Confira o trabalho</b><span>O link individual identifica sua submissão.</span></li><li><b>Revise o texto completo</b><span>Inclua título, autoria e afiliações atualizadas.</span></li><li><b>Guarde o protocolo</b><span>A organização conferirá a versão recebida.</span></li></ol><p class="preserve">Seu resumo original permanece preservado. Cada reenvio cria um registro separado.</p><a href="mailto:workshop.ppengfis@ufrpe.br">Precisa de ajuda? Fale com a organização ↗</a></aside>
+<section class="paper" aria-label="Envio de correções">
+<div id="loading" role="status">Conferindo seu link…</div>
+<div id="locked" hidden><span class="label">ACESSO INDIVIDUAL</span><h2>Abra o link recebido por e-mail</h2><p>Para proteger sua submissão, esta página é acessada pelo link individual enviado junto com a aprovação do resumo.</p><p>Não encontrou a mensagem? Solicite seu link à organização.</p><a class="button" href="mailto:workshop.ppengfis@ufrpe.br?subject=Link%20para%20corre%C3%A7%C3%A3o%20do%20resumo">Solicitar meu link</a></div>
+<div id="problem" class="error" hidden role="alert"></div>
+<form id="correctionForm" hidden>
+<div class="work"><span class="label">TRABALHO IDENTIFICADO</span><div><strong id="code"></strong><span class="badge">Aprovado</span></div><p id="originalTitle"></p></div>
+<div class="section-title"><span>01</span><h2>Identificação do trabalho</h2></div>
+<label for="title">Título completo</label><input id="title" name="title" maxlength="300" required autocomplete="off">
+<label for="authors">Autores e coautores</label><textarea id="authors" name="authors" maxlength="1800" rows="2" required></textarea><p class="hint">Mantenha a ordem de autoria e confira a grafia dos nomes.</p>
+<label for="affiliations">Afiliações institucionais</label><textarea id="affiliations" name="affiliations" maxlength="3500" rows="2" required></textarea><p class="hint">Indique a instituição de cada autor, usando os mesmos índices.</p>
+<div class="section-title"><span>02</span><h2>Resumo corrigido</h2></div>
+<div class="label-line"><label for="abstract">Texto completo em inglês</label><span id="counter">0 / 2.000</span></div><textarea id="abstract" name="abstract" maxlength="2000" rows="12" required aria-describedby="abstractHint counter"></textarea><p class="hint" id="abstractHint">Até 2.000 caracteres, incluindo espaços. Envie a versão integral, com as correções incorporadas. O idioma será conferido pela organização.</p>
+<label for="changes">O que foi ajustado?</label><textarea id="changes" name="changes" maxlength="2500" rows="3" placeholder="Descreva brevemente as alterações e, se necessário, esclareça as sugestões que não foram incorporadas." required></textarea>
+<div class="honeypot" aria-hidden="true"><label>Deixe vazio<input name="website" tabindex="-1" autocomplete="off"></label></div>
+<label class="check"><input id="confirm" name="confirm" type="checkbox" required><span>Conferi o texto completo e confirmo a anuência dos coautores com esta versão e seu uso no livro de resumos.</span></label>
+<p class="hint">A versão enviada ficará em conferência. Ela não substitui automaticamente o texto do livro.</p>
+<div id="formError" class="error" role="alert" hidden></div>
+<button id="submit" class="button" type="submit">Enviar versão corrigida <span>→</span></button>
+</form>
+<div id="success" hidden role="status" tabindex="-1"><span class="success-icon">✓</span><span class="label">ENVIO REGISTRADO</span><h2>Recebemos sua versão.</h2><p>Ela está disponível para conferência pela organização. Seu resumo original continua preservado.</p><label>Protocolo de recebimento</label><p id="receipt" class="receipt"></p><p id="receivedAt" class="hint"></p><button id="download" class="button" type="button">Baixar comprovante</button><button id="newVersion" class="secondary" type="button">Preciso enviar outra versão</button></div>
+</section></div>
+<footer>21 e 22 de outubro de 2026 <span>UFRPE · UACSA · PPENGFIS</span></footer>
+</main></body></html>

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@netlify/blobs": "^11.1.4",
     "dotenv": "^17.2.3",
     "framer-motion": "^11.2.6",
     "lucide-react": "^0.454.0",

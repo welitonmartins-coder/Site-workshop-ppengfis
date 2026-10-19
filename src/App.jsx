@@ -86,6 +86,7 @@ export default function App() {
             <a href="#sponsors" className="hover:text-teal-700 transition">Sponsors</a>
             <a href="#registration" className="hover:text-teal-700 transition">Registration</a>
             <a href="#abstract-submission" className="hover:text-teal-700 transition">Abstract Submission</a>
+            <a href="/abstract-corrections.html" className="hover:text-teal-700 transition">Abstract Corrections</a>
           </div>
           
           <div className="flex items-center gap-2">
