@@ -18,7 +18,7 @@ export function verifyLink(token,secret,now){
  if(!/^R\d{2}$/.test(data.code)||typeof data.email!=='string'||!Number.isFinite(data.expires)||now>data.expires)throw new Error('invalid');
  return data;
 }
-export function createHandler({secret,roster,store,now=()=>Date.now(),preview=false}){
+export function createHandler({secret,roster,store,submitForm,now=()=>Date.now(),preview=false}){
  return async event=>{
   if(!['GET','POST'].includes(event.httpMethod))return json(405,{error:'Método não permitido.'});
   if(!secret||secret.length<32||!Array.isArray(roster))return json(503,{error:'O recebimento ainda não foi habilitado pela organização.'});
@@ -34,7 +34,8 @@ export function createHandler({secret,roster,store,now=()=>Date.now(),preview=fa
    const key='_health/'+randomUUID();
    try{const result=await store.setJSON(key,{probe:true,at:new Date(timestamp).toISOString()},{onlyIfNew:true});const saved=await store.get(key,{type:'json',consistency:'strong'});return result.modified&&saved?.probe?json(200,{ready:true}):json(503,{ready:false});}catch(err){console.error('Corrections storage readiness:',err.name,err.message);return json(503,{ready:false});}
   }
-  if(event.httpMethod==='GET')return json(200,{code:original.code,title:original.title,authors:original.authors,affiliations:original.affiliations,abstract:original.abstract,deadline:'30 de outubro de 2026',preview});
+  const isTest=data.purpose==='forms-test';
+  if(event.httpMethod==='GET')return json(200,{code:original.code,title:isTest?'[TESTE] Revisão do resumo para o livro do workshop':original.title,authors:isTest?'Weliton Soares Martins':original.authors,affiliations:isTest?'UFRPE':original.affiliations,abstract:isTest?'This is an organizational test of the corrected abstract submission workflow. It must be excluded from the final abstract book.':original.abstract,deadline:'30 de outubro de 2026',preview,isTest});
   if(Buffer.byteLength(event.body||'')>24000)return json(413,{error:'O conteúdo enviado excede o tamanho permitido.'});
   let input;try{input=JSON.parse(event.body||'');}catch{return json(400,{error:'Não foi possível ler o envio.'});}
   if(input.website)return json(400,{error:'Envio inválido.'});
@@ -44,15 +45,21 @@ export function createHandler({secret,roster,store,now=()=>Date.now(),preview=fa
   }
   if(input.confirm!==true)return json(400,{error:'Confirme a revisão e a anuência dos coautores.'});
   if(!/^[0-9a-f-]{36}$/i.test(input.requestId||''))return json(400,{error:'Identificador do envio inválido. Recarregue a página.'});
-  const key=`${original.code}/${input.requestId}`;
+  const key=`${isTest?'_tests/':''}${original.code}/${input.requestId}`;
   const content=Object.fromEntries(Object.keys(fields).map(k=>[k,input[k].trim()]));
   const checksum=createHash('sha256').update(JSON.stringify(content)).digest('hex');
   const receipt=original.code+'-'+input.requestId.toUpperCase();
-  const record={receipt,code:original.code,email:original.email,receivedAt:new Date(timestamp).toISOString(),status:'recebido_para_conferencia',checksum,...content};
+  const record={receipt,code:original.code,email:isTest?'weliton.martins@ufrpe.br':original.email,receivedAt:new Date(timestamp).toISOString(),status:'recebido_para_conferencia',isTest,checksum,...content};
   try{
    const result=await store.setJSON(key,record,{onlyIfNew:true});
-   if(!result.modified){const previous=await store.get(key,{type:'json',consistency:'strong'});if(!previous||previous.checksum!==checksum)return json(409,{error:'Este envio já foi registrado com outro conteúdo. Inicie uma nova revisão.'});return json(200,{receipt:previous.receipt,receivedAt:previous.receivedAt,preview,repeated:true});}
-   return json(201,{receipt,receivedAt:record.receivedAt,preview});
+   const saved=result.modified?record:await store.get(key,{type:'json',consistency:'strong'});
+   if(!saved||saved.checksum!==checksum)return json(409,{error:'Este envio já foi registrado com outro conteúdo. Inicie uma nova revisão.'});
+   if(submitForm){
+    const deliveryKey='_forms_delivery/'+key;
+    const delivered=await store.get(deliveryKey,{type:'json',consistency:'strong'});
+    if(!delivered){await submitForm(saved);await store.setJSON(deliveryKey,{receipt:saved.receipt,at:new Date(timestamp).toISOString()},{onlyIfNew:true});}
+   }else if(!preview)return json(503,{error:'O recebimento no Forms ainda não foi habilitado.'});
+   return json(result.modified?201:200,{receipt:saved.receipt,receivedAt:saved.receivedAt,preview,isTest,repeated:!result.modified});
   }catch{return json(503,{error:'Não foi possível confirmar o recebimento. Tente novamente sem fechar esta página; o mesmo envio não será duplicado.'});}
  };
 }

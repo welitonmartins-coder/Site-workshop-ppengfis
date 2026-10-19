@@ -10,7 +10,7 @@ async function init(){
  if(!token){$('loading').hidden=true;$('locked').hidden=false;return;}
  try{const data=await call('GET');$('code').textContent=data.code;$('originalTitle').textContent=data.title;
  for(const field of ['title','authors','affiliations','abstract'])$(field).value=data[field]||'';
- counter();$('correctionForm').hidden=false;$('preview').hidden=!data.preview;
+ counter();$('correctionForm').hidden=false;$('preview').hidden=!(data.preview||data.isTest);if(data.isTest)$('preview').textContent='Teste da organização. O envio será registrado no Netlify Forms como teste e não integrará o livro de resumos.';
  }catch(err){$('problem').textContent=err.message;$('problem').hidden=false;$('locked').hidden=false;}finally{$('loading').hidden=true;}
 }
 $('abstract').addEventListener('input',counter);
