@@ -1,0 +1,11 @@
+import {writeFile,mkdir} from 'node:fs/promises';
+import {formFields} from '../netlify/lib/corrections-forms.js';
+const secret='fixture-secret-not-used-in-production';
+const original={codigo:'R01',email:'fixture@example.invalid',title:'Original',authors:'Author',affiliations:'University',abstract:'Original abstract'};
+const make=(time,receipt,text,isTest=false)=>formFields({code:'R01',email:original.email,title:'Revised',authors:'Author',affiliations:'University',abstract:text,changes:'Clarity',receipt,receivedAt:time,checksum:text,isTest},secret);
+const older=make('2026-10-20T12:00:00.000Z','R01-OLDER','Older revision');
+const latest=make('2026-10-21T12:00:00.000Z','R01-LATEST','Latest revision');
+const test=make('2026-10-22T12:00:00.000Z','R01-TEST','Do not select',true);
+await mkdir('tmp',{recursive:true});
+await writeFile('tmp/corrections-export-fixture.json',JSON.stringify({secret,original,corrections:[older,latest,{...latest},test,{...latest,receipt:'TAMPERED',abstract:'Tampered'}]}));
+console.log('Fixture de exportação preparada sem dados reais.');

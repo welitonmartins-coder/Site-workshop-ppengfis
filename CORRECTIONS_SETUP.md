@@ -1,5 +1,7 @@
 # Página de correções do VII Workshop
 
+Atualização de 19/10/2026: os textos completos corrigidos agora também são recebidos no Netlify Forms, no formulário `abstract-corrections`, que passa a ser o local de consulta e exportação em CSV. O Blobs permanece como cópia técnica e controle de reenvio. Consulte `FORMS_CORRECTIONS.md` para selecionar a versão mais recente e excluir testes.
+
 Implementação local em `/abstract-corrections.html`, com função privada `/api/abstract-corrections`. O formulário original `abstract` não é modificado. O recebimento utiliza Netlify Blobs, em armazenamento separado por contexto de deploy. Cada correção tem protocolo, checksum e estado `recebido_para_conferencia`; nenhuma versão é marcada automaticamente como validada. O armazenamento usa escrita condicional e não substitui versões anteriores. Não há e-mails automáticos nesta primeira implementação: o comprovante aparece na página e pode ser baixado.
 
 ## Antes de publicar
