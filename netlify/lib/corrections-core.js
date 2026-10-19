@@ -32,7 +32,7 @@ export function createHandler({secret,roster,store,now=()=>Date.now(),preview=fa
   // Test entries stay under a reserved prefix, outside all Rxx versions.
   if(data.purpose==='readiness'&&event.httpMethod==='POST'){
    const key='_health/'+randomUUID();
-   try{const result=await store.setJSON(key,{probe:true,at:new Date(timestamp).toISOString()},{onlyIfNew:true});const saved=await store.get(key,{type:'json',consistency:'strong'});return result.modified&&saved?.probe?json(200,{ready:true}):json(503,{ready:false});}catch{return json(503,{ready:false});}
+   try{const result=await store.setJSON(key,{probe:true,at:new Date(timestamp).toISOString()},{onlyIfNew:true});const saved=await store.get(key,{type:'json',consistency:'strong'});return result.modified&&saved?.probe?json(200,{ready:true}):json(503,{ready:false});}catch(err){console.error('Corrections storage readiness:',err.name,err.message);return json(503,{ready:false});}
   }
   if(event.httpMethod==='GET')return json(200,{code:original.code,title:original.title,authors:original.authors,affiliations:original.affiliations,abstract:original.abstract,deadline:'30 de outubro de 2026',preview});
   if(Buffer.byteLength(event.body||'')>24000)return json(413,{error:'O conteúdo enviado excede o tamanho permitido.'});
