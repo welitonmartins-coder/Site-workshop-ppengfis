@@ -1,4 +1,4 @@
-import {createHmac,timingSafeEqual,createHash} from 'node:crypto';
+import {createHmac,timingSafeEqual,createHash,randomUUID} from 'node:crypto';
 
 export const DEADLINE='2026-10-31T02:59:59.999Z'; // 30/10, 23h59, America/Fortaleza
 const headers={'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','Referrer-Policy':'no-referrer','X-Content-Type-Options':'nosniff'};
@@ -28,6 +28,12 @@ export function createHandler({secret,roster,store,now=()=>Date.now(),preview=fa
   try{data=verifyLink((event.headers.authorization||event.headers.Authorization||'').replace(/^Bearer /,''),secret,timestamp);}catch{return json(401,{error:'Link inválido ou expirado. Use o link individual enviado por e-mail.'});}
   const original=roster.find(r=>r.code===data.code&&r.email.toLowerCase()===data.email.toLowerCase());
   if(!original)return json(401,{error:'Link inválido ou expirado. Solicite seu link à organização.'});
+  // Only an explicitly signed administrative claim can test real storage.
+  // Test entries stay under a reserved prefix, outside all Rxx versions.
+  if(data.purpose==='readiness'&&event.httpMethod==='POST'){
+   const key='_health/'+randomUUID();
+   try{const result=await store.setJSON(key,{probe:true,at:new Date(timestamp).toISOString()},{onlyIfNew:true});const saved=await store.get(key,{type:'json',consistency:'strong'});return result.modified&&saved?.probe?json(200,{ready:true}):json(503,{ready:false});}catch{return json(503,{ready:false});}
+  }
   if(event.httpMethod==='GET')return json(200,{code:original.code,title:original.title,authors:original.authors,affiliations:original.affiliations,abstract:original.abstract,deadline:'30 de outubro de 2026',preview});
   if(Buffer.byteLength(event.body||'')>24000)return json(413,{error:'O conteúdo enviado excede o tamanho permitido.'});
   let input;try{input=JSON.parse(event.body||'');}catch{return json(400,{error:'Não foi possível ler o envio.'});}
