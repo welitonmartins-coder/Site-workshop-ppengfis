@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro do ônibus | VII Workshop PPEngFis</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f1f7f7;color:#163047;font:16px/1.6 system-ui,sans-serif}main{max-width:820px;margin:auto;padding:24px 18px 60px}a{color:#086a70}h1{line-height:1.2}section,form{background:white;border:1px solid #d6e2e6;border-radius:16px;padding:24px;margin:20px 0}label{display:block;font-weight:600;margin-top:16px}input:not([type=checkbox]),select{display:block;width:100%;padding:12px;border:1px solid #899da8;border-radius:8px;font:inherit;margin-top:5px}fieldset{border:1px solid #bcced5;border-radius:10px;margin:22px 0;padding:16px}legend{font-weight:700}.check{display:flex;gap:10px;align-items:flex-start;font-weight:400}input[type=checkbox]{margin-top:8px;min-width:18px;min-height:18px}button{background:#087b80;color:white;border:0;border-radius:9px;padding:14px 22px;font:600 17px system-ui;cursor:pointer}.note{background:#edf7f8;border-left:4px solid #087b80;padding:12px}small{display:block;color:#415c6b}.honeypot{display:none}
+  </style>
+</head>
+<body><main>
+  <a href="/">← Voltar ao site do Workshop</a>
+  <h1>Ônibus para o VII Workshop PPEngFis</h1>
+  <p><strong>21 e 22 de outubro de 2026 · UFRPE / UACSA</strong></p>
+  <section aria-labelledby="percurso">
+    <h2 id="percurso">Percurso e horários</h2>
+    <p><strong>Ida:</strong> UFRPE-Sede → UFPE → UACSA.</p>
+    <ul>
+      <li><strong>UFRPE-Sede:</strong> saída às <strong>7h30</strong>, da Reitoria.</li>
+      <li><strong>UFPE:</strong> ponto na <strong>via local da BR, antes do giradouro</strong>. Esteja no ponto às <strong>7h30</strong>. A passagem está estimada entre <strong>7h40 e 7h45</strong>, após a saída da sede.</li>
+      <li><strong>Volta:</strong> saída da <strong>UACSA às 17h30</strong>, nos dois dias.</li>
+    </ul>
+    <p>Todos os horários seguem o fuso de Brasília. A passagem na UFPE é estimada e depende das condições do trânsito.</p>
+    <p class="note">Preencha o cadastro para ajudar a organização a planejar o transporte. O cadastro registra sua intenção de uso e não substitui a inscrição no evento.</p>
+  </section>
+  <form name="bus-registration" method="POST" action="/transporte-confirmado.html" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="bus-registration">
+    <p class="honeypot"><label>Não preencha este campo: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+    <h2>Cadastro de uso do ônibus</h2>
+    <p>Informe o uso previsto para cada dia. Selecione “Não utilizarei” no dia em que não precisar do transporte.</p>
+    <label for="name">Nome completo *</label><input id="name" name="name" autocomplete="name" maxlength="180" required>
+    <label for="email">E-mail usado na inscrição do evento *</label><input id="email" type="email" name="email" autocomplete="email" maxlength="254" required>
+    <fieldset><legend>21/10/2026 — Quarta-feira</legend>
+      <label for="day21">Trajetos *</label><select id="day21" name="day21_usage" required><option value="">Selecione</option><option value="none">Não utilizarei</option><option value="outbound">Somente ida</option><option value="return">Somente volta</option><option value="both">Ida e volta</option></select>
+      <label for="point21">Ponto de embarque na ida</label><select id="point21" name="day21_boarding"><option value="">Selecione, se utilizar a ida</option><option value="ufrpe">Reitoria — UFRPE-Sede</option><option value="ufpe">UFPE — via local da BR, antes do giradouro</option></select>
+    </fieldset>
+    <fieldset><legend>22/10/2026 — Quinta-feira</legend>
+      <label for="day22">Trajetos *</label><select id="day22" name="day22_usage" required><option value="">Selecione</option><option value="none">Não utilizarei</option><option value="outbound">Somente ida</option><option value="return">Somente volta</option><option value="both">Ida e volta</option></select>
+      <label for="point22">Ponto de embarque na ida</label><select id="point22" name="day22_boarding"><option value="">Selecione, se utilizar a ida</option><option value="ufrpe">Reitoria — UFRPE-Sede</option><option value="ufpe">UFPE — via local da BR, antes do giradouro</option></select>
+    </fieldset>
+    <label class="check"><input type="checkbox" name="schedule_acknowledgement" value="yes" required><span>Li os horários e os locais de embarque e estou ciente de que devo estar no ponto às 7h30. *</span></label>
+    <p><small>Os dados serão utilizados pela comissão organizadora para planejar o transporte e entrar em contato sobre o ônibus. Para corrigir um cadastro, escreva para <a href="mailto:workshop.ppengfis@ufrpe.br">workshop.ppengfis@ufrpe.br</a>.</small></p>
+    <button type="submit">Enviar cadastro do ônibus</button>
+  </form>
+</main>
+<script>
+  const form = document.querySelector('form');
+  const days = ['21', '22'];
+  function update() {
+    for (const day of days) {
+      const usage = document.getElementById('day' + day);
+      const point = document.getElementById('point' + day);
+      const outbound = ['outbound', 'both'].includes(usage.value);
+      point.required = outbound;
+      point.disabled = !outbound;
+      if (!outbound) point.value = '';
+    }
+    const unused = days.every(day => document.getElementById('day' + day).value === 'none');
+    document.getElementById('day22').setCustomValidity(unused ? 'Selecione pelo menos um trajeto em um dos dias.' : '');
+  }
+  form.addEventListener('change', update);
+  update();
+</script>
+</body></html>

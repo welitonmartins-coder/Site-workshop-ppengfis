@@ -83,6 +83,7 @@ export default function App() {
             <a href="#program" className="hover:text-teal-700 transition">Program</a>
             <a href="#speakers" className="hover:text-teal-700 transition">Speakers</a>
             <a href="#venue" className="hover:text-teal-700 transition">Venue</a>
+            <a href="/transporte.html" className="hover:text-teal-700 transition">Ônibus</a>
             <a href="#sponsors" className="hover:text-teal-700 transition">Sponsors</a>
             <a href="#registration" className="hover:text-teal-700 transition">Registration</a>
             <a href="#abstract-submission" className="hover:text-teal-700 transition">Abstract Submission</a>
@@ -104,7 +105,14 @@ export default function App() {
 
         </nav>
       </header>
-{/* 
+      <section aria-label="Transporte para o Workshop" className="max-w-6xl mx-auto px-4 py-5">
+        <div className="rounded-2xl border border-teal-300 bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-bold">Ônibus para o Workshop — 21 e 22/10</h2>
+          <p className="mt-2">Saída da Reitoria/UFRPE às 7h30, com parada na UFPE (via local da BR, antes do giradouro). Na UFPE, esteja no ponto às 7h30. Retorno: saída da UACSA às 17h30.</p>
+          <a href="/transporte.html" className="inline-block mt-4 px-5 py-3 rounded-xl bg-teal-700 text-white font-semibold">Ver percurso e cadastrar uso do ônibus</a>
+        </div>
+      </section>
+{/*
       <div className="max-w-6xl mx-auto px-4">
         <div className="w-full h-48 md:h-[300px] overflow-hidden rounded-2xl shadow-md">
           <img
