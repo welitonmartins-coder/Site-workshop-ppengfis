@@ -286,9 +286,8 @@ export default function App() {
           <p className="text-slate-700 mb-6">{VENUE.address || "UFRPE – Recife, Pernambuco, Brazil."}</p>
           
           <p className="text-slate-700 mb-6">
-            There will be a <strong>free university shuttle bus</strong>, departing from
-            <strong> UFRPE Main Campus</strong> to <strong>UACSA</strong> and returning at the end of the day. 
-            The website will be updated with more details for participants who wish to use the <strong> workshop transportation service</strong>.
+            Free workshop shuttle on October 21 and 22: departure from the UFRPE Main Campus Rectorate at 7:30 AM, with a stop at UFPE, then UACSA. At UFPE, be at the stop by 7:30 AM. Return departure from UACSA at 5:30 PM (Brasília time).{' '}
+            <a href="/transporte.html" className="font-semibold text-teal-700 underline">View boarding details and register for the bus.</a>
           </p>
 
               {VENUE.map_url ? (
