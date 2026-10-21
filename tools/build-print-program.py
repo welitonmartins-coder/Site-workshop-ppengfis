@@ -1,5 +1,5 @@
 from pathlib import Path
-import json,html
+import json,html,sys
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4,landscape
 from reportlab.pdfbase import pdfmetrics
@@ -15,7 +15,8 @@ data=json.loads((out/'programa.json').read_text(encoding='utf-8'))
 for name,file in [('Arial','arial.ttf'),('ArialB','arialbd.ttf'),('ArialI','ariali.ttf')]:pdfmetrics.registerFont(TTFont(name,str(Path('C:/Windows/Fonts')/file)))
 W,H=landscape(A4);P=W/2;M=30
 ink=HexColor('#153e42');green=HexColor('#226b69');muted=HexColor('#4d6264')
-c=canvas.Canvas(str(out/'Folder_programacao_VII_Workshop_2026.pdf'),pagesize=(W,H))
+pdf_path=out/(sys.argv[1] if len(sys.argv)>1 else 'Folder_programacao_VII_Workshop_2026.pdf')
+c=canvas.Canvas(str(pdf_path),pagesize=(W,H))
 c.setTitle('Programação do VII Workshop Internacional do PPENGFIS 2026')
 def text(txt,x,y,width,size=10,font='Arial',color=ink,leading=None):
  p=Paragraph(txt,ParagraphStyle('p',fontName=font,fontSize=size,leading=leading or size*1.2,textColor=color,spaceAfter=0))
@@ -69,4 +70,4 @@ for idx,(day,items) in enumerate(data.items()):
   if y<38:raise RuntimeError(f'Conteúdo ultrapassa painel {idx+1}: {y}')
  bottom(x,'VII Workshop Internacional do PPENGFIS · 2026')
 c.save()
-print(out/'Folder_programacao_VII_Workshop_2026.pdf')
+print(pdf_path)

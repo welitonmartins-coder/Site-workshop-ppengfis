@@ -36,6 +36,12 @@ export default function ProgramSection({ data }) {
   return (
     <section id="program" className="mx-auto max-w-6xl px-4 py-16">
       <h2 className="text-2xl md:text-3xl font-bold mb-6">Program</h2>
+      <div className="mb-6 rounded-2xl border border-teal-200 bg-white/90 p-5">
+        <h3 className="text-xl font-semibold text-slate-950">Participação on-line pelo Google Meet</h3>
+        <p className="mt-2 text-slate-700">Usaremos a mesma sala nos dias 21 e 22 de outubro de 2026. Todos os horários seguem o fuso de Brasília.</p>
+        <a href="https://meet.google.com/gfb-cfwh-kif" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 rounded-xl bg-teal-700 px-5 py-3 font-semibold text-white hover:bg-teal-800">Assistir on-line pelo Google Meet</a>
+        <p className="mt-3 text-sm text-slate-700"><strong>Para os palestrantes on-line:</strong> entre 20 minutos antes do horário da sua palestra para testar o áudio e o compartilhamento dos slides.</p>
+      </div>
       <a
         href="/programacao-impressao-2026.pdf"
         className="inline-block mb-5 rounded-lg border border-teal-700 px-4 py-2 font-medium text-teal-800 hover:bg-teal-50"
