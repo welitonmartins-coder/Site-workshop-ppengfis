@@ -219,16 +219,16 @@ export const PROGRAM = {
       abstractUrl: "/talk-abstracts.html#allan-barboza",
     },
     {
-      time: "14:40 - 16:00",
-      item: "LAB VISITS AND POSTER PRESENTATIONS",
-      type: "Poster",
-    },
-    {
       time: "16:00 - 16:50",
       item: "PROF. DR. DANIEL FELINTO – UFPE",
       title:
         "Light-Matter Quantum Correlations and the Development of Quantum Technologies in Recife, Brazil",
       abstractUrl: "/talk-abstracts.html#daniel-felinto",
+    },
+    {
+      time: "16:50 - 17:30",
+      item: "LAB VISITS AND POSTER PRESENTATIONS",
+      type: "Poster",
     },
   ],
 };

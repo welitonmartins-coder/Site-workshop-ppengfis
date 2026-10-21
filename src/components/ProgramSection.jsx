@@ -36,6 +36,14 @@ export default function ProgramSection({ data }) {
   return (
     <section id="program" className="mx-auto max-w-6xl px-4 py-16">
       <h2 className="text-2xl md:text-3xl font-bold mb-6">Program</h2>
+      <a
+        href="/programacao-impressao-2026.pdf"
+        className="inline-block mb-5 rounded-lg border border-teal-700 px-4 py-2 font-medium text-teal-800 hover:bg-teal-50"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Baixar programação para impressão (PDF)
+      </a>
     
 
       <div className="rounded-2xl border border-slate-200 bg-white/85 overflow-hidden shadow-sm">
